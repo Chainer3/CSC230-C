@@ -12,4 +12,18 @@
 #ifndef BASE
 /** Base this program uses for input and output. */
 #define BASE 7
-#endif
+
+int skipSpace()
+{
+
+}
+
+long readValue()
+{
+
+}
+
+void writeValue( long val )
+{
+
+}
