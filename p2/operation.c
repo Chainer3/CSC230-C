@@ -68,22 +68,22 @@ long minus( long a, long b)
     @param b is the second long value used for multiplication.
     @return the result or safely exit the function if an overflow would occur.
   */
-long times( long a, long b) {
+long times( long a, long b ) {
   long c = LONG_MAX / b;    
   long d = LONG_MAX / a;    
   long e = LONG_MIN / b;   
   long f = LONG_MIN / a;
 
-  if ( ( a >= 0 && b >= 0 ) && ( a * b <= LONG_MAX ) && ( d * a <= LONG_MAX ) && 
+  if (( a >= 0 && b >= 0 ) && ( a * b <= LONG_MAX ) && ( d * a <= LONG_MAX ) && 
             ( a > c || b > d )) {
     return EXIT_STATUS;
-  } else if (a >= 0 && b <= 0 && c * b <= LONG_MAX && f * a >= LONG_MIN  &&
+  } else if (( a >= 0 && b <= 0 ) && c * b <= LONG_MAX && f * a >= LONG_MIN  &&
             (a > c || b < f)) {
     return EXIT_STATUS;
-  } else if ( ( a <= 0 && b <= 0 ) && e * a >= LONG_MIN && f * a >= LONG_MIN &&
+  } else if (( a <= 0 && b <= 0 ) && e * a >= LONG_MIN && f * a >= LONG_MIN &&
             ( a < e || b < f )) {
     return EXIT_STATUS;
-  } else if ( a <= 0 && b >= 0 && e * a >= LONG_MIN && d * a <= LONG_MAX &&
+  } else if (( a <= 0 && b >= 0 ) && e * a >= LONG_MIN && d * a <= LONG_MAX &&
             ( a < e || b > d )) {
     return EXIT_STATUS;
   } else if( ( a == LONG_MIN && b == NEGATE ) || ( b == LONG_MIN && a == NEGATE ) ) {

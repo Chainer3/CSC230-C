@@ -34,6 +34,7 @@ int skipSpace()
   while ( ch == ' ' ) {
     ch = getchar();
   }
+  
   return ch;
   
 }
@@ -45,7 +46,6 @@ int skipSpace()
   */
 long readValue()
 {
-
   // Initialize an int value to store the number
   int value = 0;
   
@@ -53,14 +53,11 @@ long readValue()
   int ch = skipSpace();
  
   // Exit on error
-  if ( ch < '0' || ch > 'z' || ch != '-' || ch = '\n' ) {
+  if ( ch < '0' || ch > 'z' && ch != '-' ) {
     return FAIL_INPUT;
   
   // Perform Horner's Rule while we have a valid ASCII value
   while ( ch >= '0' && ch <= 'z' ) {
-    if ( ch < '0' || ch > 'z' || ch != '-'  || ch = '\n' ) {
-      return FAIL_INPUT;
-    }
     
     // Convert ASCII to int
     d = atoi( ch );
@@ -92,26 +89,24 @@ void writeValue( long value )
   
   if (value < 0 ) {
     putchar('-');
+    value = -value;
   }
 
   if ( value != 0 ) {
+    // Apply Horner's Rule
     d = value % BASE; 
     value = minus( value, d);
-    
-    // Changes int to char
-    ch = d + '0';
-    
+
     // Decrease size of value by base
     if ( value > 0 ) {
-    value = divide( value, BASE);
+      value = divide( value, BASE );
     }
     
-    if ( value == 0 ) {
-      return;
-    }
-    
+    // Make recursive call
     writeValue( value );
-    putchar( ch );
+    
   }
+    // Print the stack
+    putchar( d + '0' );
 
 }
