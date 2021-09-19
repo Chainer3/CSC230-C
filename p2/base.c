@@ -23,6 +23,7 @@
 /** Base this program uses for input and output. */
 #define BASE 7
 
+
 /** The skipSpace() function returns the first non-whitespace character it gets.
 
     @return the first non-whitespace character
@@ -52,12 +53,12 @@ long readValue()
   int ch = skipSpace();
  
   // Exit on error
-  if ( ch < '0' || ch > 'z' || ch != '-' ) {
+  if ( ch < '0' || ch > 'z' || ch != '-' || ch = '\n' ) {
     return FAIL_INPUT;
   
-  // Perform Horner's Rule while we have valid ASCII value
+  // Perform Horner's Rule while we have a valid ASCII value
   while ( ch >= '0' && ch <= 'z' ) {
-    if ( ch < '0' || ch > 'z' || ch != '-' ) {
+    if ( ch < '0' || ch > 'z' || ch != '-'  || ch = '\n' ) {
       return FAIL_INPUT;
     }
     
@@ -89,7 +90,7 @@ void writeValue( long value )
   int ch;
   int d;
   
-  if (value < 0) {
+  if (value < 0 ) {
     putchar('-');
   }
 
@@ -101,11 +102,11 @@ void writeValue( long value )
     ch = d + '0';
     
     // Decrease size of value by base
-    if ( value > 0) {
+    if ( value > 0 ) {
     value = divide( value, BASE);
     }
     
-    if (value == 0) {
+    if ( value == 0 ) {
       return;
     }
     
