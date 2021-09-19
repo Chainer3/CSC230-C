@@ -6,12 +6,14 @@
    input.
  */
 
+#include "base.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include "operation.h"
+#include "limits.h"
 
-/** Exit Status represeting 100 for when overflow happnes*/
-#define EXIT_STATUS 100
-/** Exit Status represeting 100 for when dividing by zero is detected*/
-#define EXIT_STATUS_ZERO 101
-
+#define IS_NEGATIVE -1
 
 /** The plus() function facilitates safe addition of two long value before returning the
     sum. If an overflow would occur the program will safely exit.
@@ -25,10 +27,15 @@ long plus( long a, long b)
   if ( a >= 0 && b >= 0) {
     if ( a + b < 0 || a + b > LONG_MAX ) {
       return EXIT_STATUS;
+    } else {
+      return a + b;
     }
   } else if ( a < 0 && b < 0 ) {
     if ( a + b > LONG_MAX || a + b < LONG_MIN ) {
       return EXIT_STATUS;
+    } else {
+      return a + b;
+    }
   } else {
     return a + b;
   }
@@ -86,7 +93,8 @@ long times( long a, long b ) {
   } else if (( a <= 0 && b >= 0 ) && e * a >= LONG_MIN && d * a <= LONG_MAX &&
             ( a < e || b > d )) {
     return EXIT_STATUS;
-  } else if( ( a == LONG_MIN && b == NEGATE ) || ( b == LONG_MIN && a == NEGATE ) ) {
+  } else if( ( a == LONG_MIN && b == IS_NEGATIVE ) || 
+             ( b == LONG_MIN && a == IS_NEGATIVE ) ) {
     return EXIT_STATUS;
   } else {
     return a * b;
@@ -100,7 +108,8 @@ long times( long a, long b ) {
     @param b is the second long value used for division.
     @return the result or safely exit the function if an overflow would occur.
   */
-long divide( long a, long b) {
+long divide( long a, long b)
+{
   if ( b == 0 ) {
     return EXIT_STATUS_ZERO;
   }

@@ -10,11 +10,11 @@
     operator.
   */
 
-#include <base.h>
+#include "base.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <operation.h>
+#include "operation.h"
 
 // This preprocessor syntax makes it so we can override the value of BASE with
 // a compiler option.  For some desired base, n, we can compile with: -DBASE=n
@@ -22,7 +22,8 @@
 #ifndef BASE
 /** Base this program uses for input and output. */
 #define BASE 7
-
+/** Terminates BASE preprocessor */
+#endif 
 
 /** The skipSpace() function returns the first non-whitespace character it gets.
 
@@ -49,29 +50,36 @@ long readValue()
   // Initialize an int value to store the number
   int value = 0;
   
+  // One's place variable for Horner's Rule
+  int d = 0;
+  
   // Initialize and get the next character that's not a space
   int ch = skipSpace();
- 
-  // Exit on error
-  if ( ch < '0' || ch > 'z' && ch != '-' ) {
-    return FAIL_INPUT;
   
+  // Special case of initial char being a '\n'
+  if (ch == '\n' ) {
+    return EXIT_SUCCESS;
+  }
+  // Exit on error
+  if ( (ch < '0' || ch > 'z') && ch != '-' ) {
+    return FAIL_INPUT;
+  }
   // Perform Horner's Rule while we have a valid ASCII value
   while ( ch >= '0' && ch <= 'z' ) {
     
     // Convert ASCII to int
-    d = atoi( ch );
+    d = (int) ch;
 
     value = times( value, BASE );
 
     value = plus( value, d );
 
     // Get the next character for calculation
-    ch = next_input_char();
+    ch = getchar();
   }
 
   // Un-get the non-ASCII range character
-  int unget( ch );
+  ungetc( ch, stdin );
   
   return value;
 }
@@ -84,7 +92,6 @@ long readValue()
   */
 void writeValue( long value )
 {
-  int ch;
   int d;
   
   if (value < 0 ) {

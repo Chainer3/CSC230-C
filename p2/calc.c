@@ -7,9 +7,11 @@
    word count once the paragraph's line limit (10) has been reached.
 */
 
-#include <stdio.h>
+#include "base.h"
 #include <stdlib.h>
-#include <stdin.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include "operation.h"
 
 //Minimum base to use for computation of input
 #define BASE_MIN 2
@@ -20,9 +22,9 @@ int main( void )
 {
    bool isEOF = false;
    long a = readValue();
-   
+
    while (!isEOF) { 
-     ch = skipSpace();
+     int ch = skipSpace();
      
      if ( ch == '+' ) {
        long b = readValue();
