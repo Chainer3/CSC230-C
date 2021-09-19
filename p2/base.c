@@ -1,3 +1,15 @@
+/**
+    @file base.c
+    @author Stephen Gonsalves (dkgonsal)
+    
+    The base.c program houses three functions. The first, skipSpace(), clears any spaces
+    between valid input characters and returns the first non-space character it gets. The 
+    second function, readValue(), takes in the first character of a value and verifies it
+    is a valid char. It then, creates a long int value from the received characters. THe 
+    final function, writeValue(), writes the result to the console, via the putchar()
+    operator.
+  */
+
 #include <base.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -26,7 +38,7 @@ int skipSpace()
 }
 
 /** The readValue() function uses the getchar() operator to create a long value 
-    using Horner's Rule.
+    using Horner's Rule with the correct base applied.
     
     @return the long value that is created from input.
   */

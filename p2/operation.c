@@ -15,6 +15,7 @@
 
 /** The plus() function facilitates safe addition of two long value before returning the
     sum. If an overflow would occur the program will safely exit.
+   
     @param a is the first long value used for subtraction.
     @param b is the second long value used for subtraction.
     @return the result or safely exit the function if an overflow would occur.
@@ -100,6 +101,8 @@ long times( long a, long b) {
     @return the result or safely exit the function if an overflow would occur.
   */
 long divide( long a, long b) {
-  total = a;
+  if ( b == 0 ) {
+    return EXIT_STATUS_ZERO;
+  }
   return a / b;
 }
