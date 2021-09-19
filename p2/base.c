@@ -48,7 +48,7 @@ long readValue()
   // Initialize an int value to store the number
   int value = 0;
   
-  // Initialize and get the next character
+  // Initialize and get the next character that's not a space
   int ch = skipSpace();
  
   // Exit on error
@@ -57,12 +57,16 @@ long readValue()
   
   // Perform Horner's Rule while we have valid ASCII value
   while ( ch >= '0' && ch <= 'z' ) {
+    if ( ch < '0' || ch > 'z' || ch != '-' ) {
+      return FAIL_INPUT;
+    }
+    
     // Convert ASCII to int
     d = atoi( ch );
 
-    value = times( value, BASE);
+    value = times( value, BASE );
 
-    value = plus( value, d);
+    value = plus( value, d );
 
     // Get the next character for calculation
     ch = next_input_char();
