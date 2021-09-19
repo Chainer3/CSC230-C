@@ -112,6 +112,9 @@ long divide( long a, long b)
 {
   if ( b == 0 ) {
     return EXIT_STATUS_ZERO;
+  } else if (  a == LONG_MIN && b == IS_NEGATIVE ) {
+    return EXIT_STATUS;
+  } else {
+    return a / b;
   }
-  return a / b;
 }

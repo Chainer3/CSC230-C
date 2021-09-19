@@ -27,10 +27,10 @@ calc20: $(OBJECTS20)
 calc7.o: calc.c base7.o
 	$(CC) $(CFLAGS) calc.c -o calc7.o
 
-base7.o: base.c operation.c
+base7.o: base.c base.h
 	$(CC) $(CFLAGS) "-DBASE=7" base.c -o base7.o
 
-base20.o: base.c operation.c
+base20.o: base.c base.h
 	$(CC) $(CFLAGS) "-DBASE=20" base.c -o base20.o
 
 operation.o: operation.c operation.h
@@ -43,6 +43,7 @@ calc.o: calc.c base.c operation.c base.h operation.h
 	$(CC) $(CFLAGS) calc.c base.c operation.c base.h operation.h 
 
 clean:
-	rm -f *.o calc7 calc20
+	rm -f *.o
 	rm -f calc base operation
 	rm -f calc7 calc20
+	rm -f base.h.gch
