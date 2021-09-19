@@ -46,4 +46,4 @@ clean:
 	rm -f *.o
 	rm -f calc base operation
 	rm -f calc7 calc20
-	rm -f base.h.gch
+	rm -f *.h.gch calc20. output.txt
