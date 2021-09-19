@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdin.h>
 
 //Minimum base to use for computation of input
 #define BASE_MIN 2
