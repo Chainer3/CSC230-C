@@ -32,7 +32,7 @@
 // Minimum ASCII value of number
 #define MIN_ASCII_NUMBER 48
 // Maximum ASCII value of number
-#define MAX_ASCII_NUMBER 57
+#define MAX_ASCII_NUMBER 55
 // Value of first switch to letters in hexidecimal
 #define DECIMAL_VAL 10
 
@@ -59,7 +59,8 @@ int skipSpace()
   */
 bool isNumber( char ch ) {
   bool number;
-  if ( (ch <  MIN_ASCII_NUMBER || ch > MAX_ASCII_NUMBER) && 
+  
+  if ( (ch >  MIN_ASCII_NUMBER || ch < MAX_ASCII_NUMBER) && 
        (ch < MIN_ASCII_LETTER || ch > MAX_ASCII_LETTER) ) {
     number = false;
   }
@@ -97,7 +98,6 @@ long readValue()
   // Perform Horner's Rule while we have a valid ASCII value
   while ( isNumber( ch ) ) {
 
-    
     // Assign correct value to d
     if ( ch >= MIN_ASCII_LETTER ) {
       d = ch - MAX_ASCII_LETTER + DECIMAL_VAL;
