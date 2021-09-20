@@ -13,37 +13,41 @@
 #include <stdbool.h>
 #include "operation.h"
 
-//Minimum base to use for computation of input
-#define BASE_MIN 2
-//Minimum base to use for computation of input
-#define BASE_MAX 36
-
 int main( void )
 {
-   bool isEOF = false;
-   long a = readValue();
-
-   while (!isEOF) { 
-     int ch = skipSpace();
+  bool isEOL = false;
+  long a = readValue();
+  printf("a = %ld", a);
+  long total = a;
+  int ch = skipSpace();
      
-     if ( ch == '+' ) {
-       long b = readValue();
-       a = plus( a, b );
-     } else if ( ch == '-' ) {
-       long b = readValue();
-       a = minus( a, b );
-     } else if ( ch == '*' ) {
-       long b = readValue();
-       a = times( a, b );
-     } else if ( ch == '/' ) {
-       long b = readValue();
-       a = divide( a, b );
-     } else if (ch == '\n') {
-       writeValue(a);
-       isEOF = true;
-       
-       // Exit the program
-       return EXIT_SUCCESS; 
-     }
-   }
+  while (!isEOL) {
+    long b;
+    
+    if (ch == '\n') {
+      isEOL = true;
+      exit(FAIL_INPUT);
+    }
+    
+    if ( ch == '+' ) {
+      b = readValue();
+      total = plus( a, b );
+    } else if ( ch == '-' ) {
+      b = readValue();    
+      total = minus( a, b );
+    } else if ( ch == '*' ) {
+      b = readValue();
+      total = times( a, b );
+    } else if ( ch == '/' ) {
+      b = readValue();
+      total = divide( a, b );
+    } else {
+      break;
+    }
+  }
+  
+  writeValue( total );
+  
+  // Exit the program
+  return EXIT_SUCCESS; 
 }

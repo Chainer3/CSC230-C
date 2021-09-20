@@ -11,10 +11,11 @@
   */
 
 #include "base.h"
+#include "operation.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "operation.h"
+#include <ctype.h>
 
 // This preprocessor syntax makes it so we can override the value of BASE with
 // a compiler option.  For some desired base, n, we can compile with: -DBASE=n
@@ -24,6 +25,17 @@
 #define BASE 7
 /** Terminates BASE preprocessor */
 #endif 
+// Minimum ASCII value of uppercase chars
+#define MIN_ASCII_LETTER 65
+// Maximum ASCII value of uppercase chars
+#define MAX_ASCII_LETTER 90
+// Minimum ASCII value of number
+#define MIN_ASCII_NUMBER 48
+// Maximum ASCII value of number
+#define MAX_ASCII_NUMBER 57
+// Value of first switch to letters in hexidecimal
+#define DECIMAL_VAL 10
+
 
 /** The skipSpace() function returns the first non-whitespace character it gets.
 
@@ -40,6 +52,21 @@ int skipSpace()
   
 }
 
+/** The isNumber() function determines if the char is a valid number.
+    
+    @param ch is the char being assessed.
+    @return true if ch is a valid char. Otherwise, return false.
+  */
+bool isNumber( char ch ) {
+  bool number;
+  if ( (ch <  MIN_ASCII_NUMBER || ch > MAX_ASCII_NUMBER) && 
+       (ch < MIN_ASCII_LETTER || ch > MAX_ASCII_LETTER) ) {
+    number = false;
+  }
+  
+  return number;
+}
+
 /** The readValue() function uses the getchar() operator to create a long value 
     using Horner's Rule with the correct base applied.
     
@@ -48,40 +75,57 @@ int skipSpace()
 long readValue()
 {
   // Initialize an int value to store the number
-  int value = 0;
+  long value = 0;
   
   // One's place variable for Horner's Rule
-  int d = 0;
+  long d = 0;
   
-  // Initialize and get the next character that's not a space
+  // Read first char
   int ch = skipSpace();
+  // Check for negative value
+  bool isNeg = false;
+  if (ch == '-') {
+    ch = getchar();
+    isNeg = true;
+  }
   
-  // Special case of initial char being a '\n'
-  if (ch == '\n' ) {
-    return EXIT_SUCCESS;
-  }
-  // Exit on error
-  if ( (ch < '0' || ch > 'z') && ch != '-' ) {
-    return FAIL_INPUT;
-  }
+  // Exit on error if invalid char
+//   if ( !isNumber( ch ) ) {
+//     exit(FAIL_INPUT);
+//   }
+  
   // Perform Horner's Rule while we have a valid ASCII value
-  while ( ch >= '0' && ch <= 'z' ) {
+  while ( isNumber( ch ) ) {
+
     
-    // Convert ASCII to int
-    d = (int) ch;
+    // Assign correct value to d
+    if ( ch >= MIN_ASCII_LETTER ) {
+      d = ch - MAX_ASCII_LETTER + DECIMAL_VAL;
+    } else {
+      d = ch - MIN_ASCII_NUMBER;
+    }
 
+    if ( d >= BASE ) {
+      exit(FAIL_INPUT);
+    }
+    
+    // Horner's Rule
     value = times( value, BASE );
-
     value = plus( value, d );
-
-    // Get the next character for calculation
+    
     ch = getchar();
   }
 
   // Un-get the non-ASCII range character
   ungetc( ch, stdin );
   
-  return value;
+  // Return the value of the first input
+  if ( isNeg ) {
+    return times( value, -1 );
+  } else {
+    return value;
+  }
+  
 }
 
 /** The writeValue() function receives a long int parameter and processes it
@@ -92,14 +136,15 @@ long readValue()
   */
 void writeValue( long value )
 {
-  int d;
+  long d = 0;
   
   if (value < 0 ) {
     putchar('-');
-    value = -value;
+    value = minus( 0, value );
   }
 
   if ( value != 0 ) {
+
     // Apply Horner's Rule
     d = value % BASE; 
     value = minus( value, d);

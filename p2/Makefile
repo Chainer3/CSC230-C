@@ -12,7 +12,7 @@ HEADER7 = base.h operation.h
 OUT20 = calc20
 
 CC = gcc
-CFLAGS = -Wall -std=c99 -c
+CFLAGS = -Wall -std=c99 -c -g
 LDLIBS = -lm
 
 
@@ -27,13 +27,13 @@ calc20: $(OBJECTS20)
 calc7.o: calc.c base7.o
 	$(CC) $(CFLAGS) calc.c -o calc7.o
 
-base7.o: base.c base.h
+base7.o: base.c operation.c
 	$(CC) $(CFLAGS) "-DBASE=7" base.c -o base7.o
 
-base20.o: base.c base.h
+base20.o: base.c operation.o
 	$(CC) $(CFLAGS) "-DBASE=20" base.c -o base20.o
 
-operation.o: operation.c operation.h
+operation.o: operation.c
 	$(CC) $(CFLAGS) operation.c -o operation.o
 
 calc20.o: calc.o base20.o operation.o
