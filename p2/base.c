@@ -32,7 +32,7 @@
 // Minimum ASCII value of number
 #define MIN_ASCII_NUMBER 48
 // Maximum ASCII value of number
-#define MAX_ASCII_NUMBER 55
+#define MAX_ASCII_NUMBER 57
 // Value of first switch to letters in hexidecimal
 #define DECIMAL_VAL 10
 
@@ -90,10 +90,10 @@ long readValue()
     isNeg = true;
   }
   
-  // Exit on error if invalid char
-//   if ( !isNumber( ch ) ) {
-//     exit(FAIL_INPUT);
-//   }
+  //Exit on error if invalid char
+  if ( !isNumber( ch ) ) {
+    exit(FAIL_INPUT);
+  }
   
   // Perform Horner's Rule while we have a valid ASCII value
   while ( isNumber( ch ) ) {
