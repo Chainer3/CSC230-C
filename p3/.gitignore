@@ -1,0 +1,4 @@
+match
+cmd.sh
+stderr.txt
+output.txt

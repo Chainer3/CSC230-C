@@ -5,10 +5,6 @@
     
   */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
 #include "input.h"
 
 /** The readLine() method validates a received stream, copied into a char array
@@ -22,17 +18,14 @@
   */
 bool readLine( FILE *fp, char line[], int capacity ) 
 { 
+
   if ( fgets( line, capacity, fp ) != NULL) {
     if (strlen( line ) == capacity && line[ strlen(line) - 1 ] != '\n') {
-      printf("Line too long\n");
+      fprintf(stderr, "Line too long\n");
       exit( 1 );
     }
-
     return true;
-
   } else {
     return false;
   }
-
 }
-

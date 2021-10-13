@@ -1,12 +1,19 @@
 /** Maximum output line length. */
 #define OUTPUT_LIMIT 80
 /** Maximum lines reported in list */
-#define MAX_FILE_LINES 1000
+#define MAX_FILE_LINES 999
+/** Maximum output line length. */
+#define MAX_NUMS_LINE_LEN 75
 
-extern const int idx;
-static const int lineNum[ MAX_FILE_LINES ];
-static const char matchLine[ MAX_FILE_LINES ][ OUTPUT_LIMIT ];
-extern const char matchList[ MAX_FILE_LINES ];
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
 
-void addLine( int lno, char const line[] );
+extern int idx;
+extern int lineNum[ MAX_FILE_LINES ];
+extern char matchList[ MAX_FILE_LINES ][ OUTPUT_LIMIT ];
+extern char matchListNums[ MAX_FILE_LINES ][ MAX_NUMS_LINE_LEN + 1 ];
+
+void addLine( int, char const [] );
 void printList( bool numberFlag );
