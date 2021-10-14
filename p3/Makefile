@@ -21,4 +21,4 @@ input.o: input.c input.h
 clean:
 	rm -f *.o
 	rm -f match
-	rm -f *.h.gch output.txt
+	rm -f *cmd.sh output.txt
