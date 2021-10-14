@@ -43,16 +43,15 @@ void printList( bool numberFlag )
 {
 
   int prIdx = 0;
-
   while ( idx > prIdx ) {  
     if ( numberFlag ) {
       if ( strlen(matchList[prIdx]) > OUTPUT_LIMIT ) {
-        printf( "%.3d %.74s..", lineNum[prIdx], matchList[prIdx] );     
+        printf( "%.3d %.74s..\n", lineNum[prIdx], matchList[prIdx] );     
       } else {
-        printf( "%.3d %s", lineNum[prIdx], matchList[prIdx] );
+        printf( "%.3d %s\n", lineNum[prIdx], matchList[prIdx] );
       }
     } else {
-      printf( "%.80s", matchList[prIdx] );
+      printf( "%.80s\n", matchList[prIdx] );
     }
     prIdx++;
   }

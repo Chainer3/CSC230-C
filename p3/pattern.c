@@ -74,6 +74,7 @@ bool matchPattern( char const pat[], char const line[] )
   if( p > 0 && pat[0] == '*') {
     cur[1] = true;
   }
+  
   // Iterate through the list
   for ( int i = 0; i < l; i++ ) {
     char ch = line[i];
@@ -82,29 +83,30 @@ bool matchPattern( char const pat[], char const line[] )
     for ( int j = 0; j < p; j++ ) {
       
       // Check if current we've transitioned states
-      if ( !cur[ j ] ) continue;
-      switch ( pat[ j ] ) {
-        case '?':
-          next[ j + 1 ] = true;
-          if ( j + 1 < p && pat[ j + 1 ] == '*' ) {
-            next[ j + 2 ] = true;
-          }
-          match = true;
-          break;
-        case '*':
-          next[ j ] = true;
-          next[ j + 1 ] = true;
-          match = true;
-          break;
-        default:
-          if ( pat[ j ] == ch ) {
+      if ( cur[ j ] ) {
+        switch ( pat[ j ] ) {
+          case '?':
             next[ j + 1 ] = true;
             if ( j + 1 < p && pat[ j + 1 ] == '*' ) {
               next[ j + 2 ] = true;
             }
-          }
-          match = true;
-          break;
+            match = true;
+            break;
+          case '*':
+            next[ j ] = true;
+            next[ j + 1 ] = true;
+            match = true;
+            break;
+          default:
+            if ( pat[ j ] == ch ) {
+              next[ j + 1 ] = true;
+              if ( j + 1 < p && pat[ j + 1 ] == '*' ) {
+                next[ j + 2 ] = true;
+              }
+            }
+            match = true;
+            break;
+        }
       }
     }
     if (!match) {
