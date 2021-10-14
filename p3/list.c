@@ -8,6 +8,11 @@
 
 #include "list.h"
 
+int idx = 0;
+int maxLineNum = 0;
+int lineNum[ MAX_FILE_LINES ];
+char matchList[ MAX_FILE_LINES ][ INPUT_LIMIT + 1 ];
+
 /** The addLine() function adds a line of matching text to the matchList array.
     It also adds the line number of the matching text to the lineNum array.
      
@@ -17,34 +22,17 @@
 void addLine( int lno, char const line[] ) 
 {
   // Check if we've reach 1000 matched lines
-  if ( idx > MAX_FILE_LINES ) {
+  if ( idx == MAX_FILE_LINES + 1 ) {
     fprintf( stderr, "Too many matches\n");
+    exit ( 1 );
   }
-  
-  // Handle case where line length >= Output Limit (80)
-  if ( strlen(line) >= MAX_NUMS_LINE_LEN - 1) {
-    char newLine[OUTPUT_LIMIT];
-    char newLineNums[ MAX_NUMS_LINE_LEN ];
-    for ( int i = 0; i < OUTPUT_LIMIT; i++ ) {
-      if (i < MAX_NUMS_LINE_LEN - 1) {
-        newLine[i] = line[i];
-        newLineNums[i] = line[i];
-      } else {
-        newLine[i] = line[i];
-      }
-    }
-    
-    matchList[ idx ] = newLine;
-    matchListNums[ idx ] = newLineNums;
-    lineNum[ idx ] = lno;
-    idx++;
-  } else {
-    // Add line/number to each array
-    matchList[ idx ]= line;
-    matchListNums[ idx ]= line;
-    lineNum[ idx ] = lno;
-    idx++;
+  if ( maxLineNum < lno ) {
+    maxLineNum = lno;
   }
+  // Add the lno and line to their arrays
+  lineNum[ idx ] = lno;
+  strcpy( matchList[idx], line);
+  idx++;
 }
 
 /**
@@ -53,19 +41,19 @@ void addLine( int lno, char const line[] )
   */
 void printList( bool numberFlag )
 {
-//prints all the matching lines from the addLine() function
-//if numberFlag == true, each line number is added to the front of each line
-//line numbers require 3 spaces each regardless of # of digits
-  int len = 0;
-  if ( numberFlag ) {
-    while ( len < idx ) {
-      printf( "  %d %s", lineNum[len], matchListNums[len] );
-      len++;
+
+  int prIdx = 0;
+
+  while ( idx > prIdx ) {  
+    if ( numberFlag ) {
+      if ( strlen(matchList[prIdx]) > OUTPUT_LIMIT ) {
+        printf( "%.3d %.74s..", lineNum[prIdx], matchList[prIdx] );     
+      } else {
+        printf( "%.3d %s", lineNum[prIdx], matchList[prIdx] );
+      }
+    } else {
+      printf( "%.80s", matchList[prIdx] );
     }
-  } else {
-    while ( len < idx ) {
-      printf( "%s", matchList[len] );
-      len++;
-    }  
+    prIdx++;
   }
 }

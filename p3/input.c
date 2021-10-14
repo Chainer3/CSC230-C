@@ -17,15 +17,26 @@
     @return It returns true if the line is valid. Otherwise, returns false.
   */
 bool readLine( FILE *fp, char line[], int capacity ) 
-{ 
+{
+  int len = 0;
 
-  if ( fgets( line, capacity, fp ) != NULL) {
-    if (strlen( line ) == capacity && line[ strlen(line) - 1 ] != '\n') {
-      fprintf(stderr, "Line too long\n");
+  // Get/test first char and continue reading until newline char
+  char ch = fgetc( fp );
+  if ( ch == EOF ) {
+    return false;
+  } 
+  
+  // 
+  while ( ch != '\n' ) {
+    if ( len < capacity ) {
+      line[ len++ ] = ch; 
+    } else if ( len == capacity ){
+      fprintf( stderr, "Line too long\n");
       exit( 1 );
     }
-    return true;
-  } else {
-    return false;
+    ch = fgetc( fp );
   }
+
+  line [ len ] = '\0';
+  return true;
 }

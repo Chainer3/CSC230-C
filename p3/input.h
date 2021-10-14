@@ -3,4 +3,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool readLine( FILE*, char[], int );
+#define MAX_LINE_LEN 1024
+
+bool readLine( FILE *fp, char line[], int capacity);

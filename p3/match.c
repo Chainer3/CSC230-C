@@ -11,7 +11,7 @@
 #include "list.h"
 #include "pattern.h"
 
-#define MAX_LINE_LEN 1024
+#define INPUT_LIMIT 1023
 
 /* This is the starting point of the program. Here, the main function will
    receive command line args for searching a valid input file line-by-line
@@ -24,65 +24,70 @@ int main ( int argc, char *argv[] )
 {
   
   // Initialize pattern and flags for printing
-  bool lineNums = false;
-  bool opp = false;
-  char *pat = argv[ argc - 2 ];
+  bool lineNums = NULL;
+  bool opp = NULL;
+
 
   // Check args in flag section
-  for ( int i = 1; i < (argc - 2); i++ ) {
-    if ( strcmp(argv[i], "-n") ) {
+  for ( int i = argc - 3; i >= 1; i-- ) {
+    if ( strcmp(argv[i], "-n") == 0 ) {
       lineNums = true;
-    } else if ( strcmp(argv[i], "-v") ) {
+    } else if ( strcmp(argv[i], "-v") == 0 ) {
       opp = true;
     } else {
-     fprintf( stderr, "usage: match [-n] [-v] pattern file" );
-     exit( 1 );
+      fprintf( stderr, "usage: match [-n] [-v] pattern file\n" );
+      exit( 1 );
     }
   }
   
   // Check pattern and file args for flags
-  if ( strcmp(argv[argc - 2], "-n") || strcmp(argv[argc - 2], "-v") ) {
-    fprintf( stderr, "usage: match [-n] [-v] pattern file" );
+  if ( strcmp(argv[argc - 2], "-n") == 0 || strcmp(argv[argc - 2], "-v") == 0 ||
+       strcmp(argv[argc - 1], "-n") == 0 || strcmp(argv[argc - 1], "-v") == 0 ) {
+    fprintf( stderr, "usage: match [-n] [-v] pattern file\n" );
     exit( 1 );  
   }
-  if ( strcmp(argv[argc - 1], "-n") || strcmp(argv[argc - 1], "-v") ) {
-    fprintf( stderr, "usage: match [-n] [-v] pattern file" );
-    exit( 1 );
-  }
 
+
+
+  
   // Find valid file and open FileStream for reading only
   char *fileName = argv[ argc - 1 ];
+  char *pat = argv[ argc - 2 ];
   FILE *fp = fopen( fileName, "r");
   if ( !fp ) {
     fprintf(stderr, "%s%s\n", "Can't open file: ", fileName);
     exit( 1 );
   }
   
-  // Create pattern and read each line in the file for comparison
-  char line[MAX_LINE_LEN];
+  // Create line array and read each line in the file for comparison
+  char line[ INPUT_LIMIT ];
   int lno = 1;
   
   // Validate pattern and begin matching/adding to matchList
   if ( validPattern(pat) ) {
-    if ( opp ) {
-      while ( readLine(fp, line, MAX_LINE_LEN) ) {
+    while ( readLine(fp, line, INPUT_LIMIT) ) {
+      if ( opp ) {
         if ( !matchPattern(pat, line) ) {
           addLine(lno, line);
         }
-      }
-    } else {
-      while ( readLine(fp, line, MAX_LINE_LEN) ) {
+      } else {
         if ( matchPattern(pat, line) ) {
           addLine(lno, line);
         }
       }
+      lno++;
     }
+      
+    printList(lineNums);
+    fclose(fp);
+  
+  } else {
+    fclose(fp);
+    fprintf( stderr, "Invalid pattern: %s\n", argv[argc - 2]);
+    exit( 1 );
   }
   
-  printList(lineNums);
-
-  fclose(fp);
-  fp = NULL;
+  // Exit successfully
   return EXIT_SUCCESS;
 
 }

@@ -42,8 +42,9 @@
  */
 bool validPattern( char const pat[] )
 {
-  for ( int i = 0; i < strlen( pat ); i++ ) {
-    if ( pat [ i ] == '*' ) {
+  int p = strlen( pat );
+  for ( int i = 0; i < p; i++ ) {
+    if ( pat[ i ] == '*' ) {
       if ( pat [ i + 1 ] == '*' ) {
         return false;
       }
@@ -61,34 +62,67 @@ bool validPattern( char const pat[] )
  */
 bool matchPattern( char const pat[], char const line[] )
 {
+  int l = strlen(line);
+  int p = strlen(pat);
+  bool match = NULL;
+  bool cur[ strlen(pat) + 1 ];
+  memset(cur, 0, sizeof(bool)* (p + 1));
+  bool next[ strlen(pat) + 1 ];
+  memset(cur, 0, sizeof(bool)* (p + 1));
 
-  int cur[ strlen(pat) + 1 ];
-  int next[ strlen(pat) + 1 ];
-  int n = sizeof(cur) / sizeof(cur[0]);
-
-  for ( int i = 0; i < strlen(line); i++ ) {
-    if ( !cur[i] ) continue;
-    switch ( pat[i] ) {
-      case '?':
-        next[i + 1] = 1;
-        break;
-      case '*': 
-        next[i] = 1;
-        next[i + 1] = 1;
-        break;
-      default:
-        if ( cur[i] == line[i] ) {
-          next[i + 1] = 1;
-          break;
-        } else {
-          return false;
-        }
-    }
-    
-    for ( int i = 0; i < n; i++ ) {
-      cur[ i ] = next[ i ];
-    }
+  cur[0] = true;
+  if( p > 0 && pat[0] == '*') {
+    cur[1] = true;
   }
-  return true;
+  // Iterate through the list
+  for ( int i = 0; i < l; i++ ) {
+    char ch = line[i];
+    match = false;
+    // Iterate through the pattern
+    for ( int j = 0; j < p; j++ ) {
+      
+      // Check if current we've transitioned states
+      if ( !cur[ j ] ) continue;
+      switch ( pat[ j ] ) {
+        case '?':
+          next[ j + 1 ] = true;
+          if ( j + 1 < p && pat[ j + 1 ] == '*' ) {
+            next[ j + 2 ] = true;
+          }
+          match = true;
+          break;
+        case '*':
+          next[ j ] = true;
+          next[ j + 1 ] = true;
+          match = true;
+          break;
+        default:
+          if ( pat[ j ] == ch ) {
+            next[ j + 1 ] = true;
+            if ( j + 1 < p && pat[ j + 1 ] == '*' ) {
+              next[ j + 2 ] = true;
+            }
+          }
+          match = true;
+          break;
+      }
+    }
+    if (!match) {
+      return false;
+    }
+    // Copy the next arr in cur arr
+    memcpy( cur, next, p + 1);
+    memset(next, 0, sizeof(bool) * (p + 1));
+  }
+  
+  // Check results and return appropriate bool
+  if ( cur[p] ) {
+    return true;
+  }
+  if (pat[p - 1] == '*' ) {
+    return cur[p - 1];
+  }
+  return false;
+  
 }
 
