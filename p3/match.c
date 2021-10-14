@@ -47,9 +47,6 @@ int main ( int argc, char *argv[] )
     exit( 1 );  
   }
 
-
-
-  
   // Find valid file and open FileStream for reading only
   char *fileName = argv[ argc - 1 ];
   char *pat = argv[ argc - 2 ];

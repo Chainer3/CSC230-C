@@ -70,6 +70,7 @@ bool matchPattern( char const pat[], char const line[] )
   bool next[ strlen(pat) + 1 ];
   memset(cur, 0, sizeof(bool)* (p + 1));
 
+  
   cur[0] = true;
   if( p > 0 && pat[0] == '*') {
     cur[1] = true;

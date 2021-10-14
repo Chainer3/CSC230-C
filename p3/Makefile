@@ -21,4 +21,4 @@ input.o: input.c input.h
 clean:
 	rm -f *.o
 	rm -f match input pattern list
-	rm -f *cmd.sh output.txt
+	rm -f *cmd.sh output.txt stderr.txt

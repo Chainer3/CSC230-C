@@ -2,7 +2,9 @@
     @file input.c
     @author Stephen Gonsalves (dkgonsal)
     
-    
+    The input file uses the readLine() function to read in the next line from the
+    input file. If the line is longer than the received capacity, it prints an 
+    error message to stderr and exits with a status of 1.
   */
 
 #include "input.h"
