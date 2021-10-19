@@ -1,0 +1,31 @@
+Puerto Montt	Chile	-41.467	-72.933
+Kaohsiung	Republic of China (Taiwan)	22.633	120.267
+Luanda	Angola	-8.833	13.233
+Zurich	Switzerland	47.367	8.550
+Siem Reap	Cambodia	13.367	103.867
+Linz	Austria	48.300	14.283
+Sana'a	Yemen	15.350	44.200
+Patna	India	25.617	85.150
+Marrakech	Morocco	31.633	-8.017
+Vaduz	Liechtenstein	47.133	9.517
+Bandung	Indonesia	-6.917	107.617
+Buenos Aires	Argentina	-34.600	-58.383
+Simferopol	Russia	44.950	34.100
+Nuuk (Godthab)	Denmark	64.183	-51.733
+Sobral	Brazil	-3.667	-40.233
+Tashkent	Uzbekistan	41.267	69.217
+Brazzaville	Republic of the Congo	-4.267	15.300
+Temuco	Chile	-38.750	-72.667
+Surabaya	Indonesia	-7.267	112.750
+Maracay	Venezuela	10.250	-67.600
+Incheon	South Korea	37.483	126.633
+Hong Kong	People's Republic of China	22.283	114.167
+Raleigh	United States	35.817	-78.650
+Timbuktu	Mali	16.783	-3.017
+Shanghai	People's Republic of China	31.200	121.500
+Kolkata (Calcutta)	India	22.567	88.367
+Johannesburg	South Africa	-26.200	28.050
+South Park	United States	39.222	-105.998
+Las Palmas de Gran Canaria	Spain	28.150	-15.417
+Southampton	United Kingdom	50.900	-1.400
+London	United Kingdom	51.500	-0.133

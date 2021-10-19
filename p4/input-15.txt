@@ -1,0 +1,6 @@
+list zzzz
+list abcdefghijklmnopqrstuvwxyzabcd
+list abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+list too many words
+nearest 5
+quit

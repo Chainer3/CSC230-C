@@ -1,0 +1,32 @@
+cmd> add 11
+
+cmd> add 7
+
+cmd> add 14
+
+cmd> add 2
+
+cmd> add 13
+
+cmd> tour
+  ID Name                           Country                            Dist
+  11 Incheon                        South Korea                         0.0
+   7 Bandung                        Indonesia                        3304.1
+  14 Shanghai                       People's Republic of China       6093.2
+   2 Hong Kong                      People's Republic of China       6857.1
+  13 Siem Reap                      Cambodia                         7772.1
+
+cmd> nearest 10
+  ID Name                           Country                          Lat    Lon
+  17 Kolkata (Calcutta)             India                           22.6   88.4
+   9 Tashkent                       Uzbekistan                      41.3   69.2
+   3 Johannesburg                   South Africa                   -26.2   28.1
+   4 London                         United Kingdom                  51.5   -0.1
+   8 Southampton                    United Kingdom                  50.9   -1.4
+  10 Brazzaville                    Republic of the Congo           -4.3   15.3
+  18 Nuuk (Godthab)                 Denmark                         64.2  -51.7
+  12 Marrakech                      Morocco                         31.6   -8.0
+   5 Raleigh                        United States                   35.8  -78.7
+   6 Puerto Montt                   Chile                          -41.5  -72.9
+
+cmd> quit

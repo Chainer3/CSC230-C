@@ -1,0 +1,16 @@
+Ottawa	Canada	45.417	-75.683
+Yaounde	Cameroon	3.867	11.517
+Ho Chi Minh City	Vietnam	10.767	106.683
+Bulawayo	Zimbabwe	-20.167	28.583
+Lillehammer	Norway	61.133	10.433
+Auckland	New Zealand	-36.833	174.733
+Canberra	Australia	-35.300	149.117
+Benghazi	Libya	32.117	20.067
+Tamale	Ghana	9.400	-0.850
+The Valley	United Kingdom	-63.050
+Garanhuns	Brazil	-8.883	-36.500
+Dili	Timor-Leste	-8.550	125.583
+Atlanta	United States	33.750	-84.383
+Manzini	Swaziland	-26.483	31.367
+Santa Fe	United States	35.667	-105.967
+Budapest	Hungary	47.467	19.050

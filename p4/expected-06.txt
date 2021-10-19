@@ -1,0 +1,16 @@
+cmd> add 5
+
+cmd> add 10
+
+cmd> add 15
+
+cmd> add 20
+
+cmd> tour
+  ID Name                           Country                            Dist
+   5 Raleigh                        United States                       0.0
+  10 Brazzaville                    Republic of the Congo            6612.3
+  15 Vaduz                          Liechtenstein                   10181.4
+  20 South Park                     United States                   15455.2
+
+cmd> quit

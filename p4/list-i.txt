@@ -1,0 +1,16 @@
+Adamstown	United Kingdom	-25.067	-130.100
+Miami	United States	25.783	-80.217
+Nairobi	Kenya	-1.283	36.817
+Islamabad	Pakistan	33.717	73.067
+Chihuahua	Mexico	28.633	-106.083
+Springfield	United States	37.200	-93.283
+Kota Kinabalu	Malaysia	5.967	216.100
+Dublin	Ireland	53.350	-6.267
+Blantyre	Malawi	-15.783	35.000
+Isfahan	Iran	32.633	51.650
+Balikpapan	Indonesia	-1.267	116.833
+Rio Branco	Brazil	-9.967	-67.817
+Toronto	Canada	43.700	-79.400
+Chandigarh	India	30.750	76.783
+Ornskoldsvik	Sweden	63.283	18.733
+San Francisco	United States	37.783	-122.417

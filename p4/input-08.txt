@@ -1,0 +1,35 @@
+add 25
+add 50
+add 75
+add 100
+tour
+remove 50
+tour
+add 200
+add 300
+add 400
+add 500
+tour
+remove 500
+remove 25
+tour
+add 1
+add 600
+add 700
+add 800
+add 900
+add 951
+tour
+remove 600
+remove 75
+remove 100
+remove 700
+remove 300
+remove 400
+remove 1
+remove 800
+remove 200
+remove 900
+remove 951
+tour
+quit

@@ -1,0 +1,24 @@
+cmd> list
+  ID Name                           Country                          Lat    Lon
+   7 Bandung                        Indonesia                       -6.9  107.6
+  10 Brazzaville                    Republic of the Congo           -4.3   15.3
+   1 Buenos Aires                   Argentina                      -34.6  -58.4
+   2 Hong Kong                      People's Republic of China      22.3  114.2
+  11 Incheon                        South Korea                     37.5  126.6
+   3 Johannesburg                   South Africa                   -26.2   28.1
+  17 Kolkata (Calcutta)             India                           22.6   88.4
+  16 Las Palmas de Gran Canaria     Spain                           28.1  -15.4
+   4 London                         United Kingdom                  51.5   -0.1
+  12 Marrakech                      Morocco                         31.6   -8.0
+  18 Nuuk (Godthab)                 Denmark                         64.2  -51.7
+   6 Puerto Montt                   Chile                          -41.5  -72.9
+   5 Raleigh                        United States                   35.8  -78.7
+  14 Shanghai                       People's Republic of China      31.2  121.5
+  13 Siem Reap                      Cambodia                        13.4  103.9
+  20 South Park                     United States                   39.2 -106.0
+   8 Southampton                    United Kingdom                  50.9   -1.4
+   9 Tashkent                       Uzbekistan                      41.3   69.2
+  19 Timbuktu                       Mali                            16.8   -3.0
+  15 Vaduz                          Liechtenstein                   47.1    9.5
+
+cmd> quit

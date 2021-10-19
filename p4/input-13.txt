@@ -1,0 +1,10 @@
+list
+list south
+add 4
+add 16
+tour
+add 12
+add 19
+remove 4
+tour
+quit

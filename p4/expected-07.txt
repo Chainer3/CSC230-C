@@ -1,0 +1,64 @@
+cmd> add 3
+
+cmd> add 6
+
+cmd> add 12
+
+cmd> add 7
+
+cmd> add 13
+
+cmd> add 8
+
+cmd> add 11
+
+cmd> add 17
+
+cmd> add 9
+
+cmd> add 16
+
+cmd> add 15
+
+cmd> add 20
+
+cmd> add 10
+
+cmd> add 14
+
+cmd> add 18
+
+cmd> add 5
+
+cmd> add 2
+
+cmd> add 1
+
+cmd> add 4
+
+cmd> add 19
+
+cmd> tour
+  ID Name                           Country                            Dist
+   3 Johannesburg                   South Africa                        0.0
+   6 Puerto Montt                   Chile                            5565.5
+  12 Marrakech                      Morocco                         12088.7
+   7 Bandung                        Indonesia                       20062.1
+  13 Siem Reap                      Cambodia                        21487.1
+   8 Southampton                    United Kingdom                  27635.2
+  11 Incheon                        South Korea                     33202.2
+  17 Kolkata (Calcutta)             India                           35690.7
+   9 Tashkent                       Uzbekistan                      37394.7
+  16 Las Palmas de Gran Canaria     Spain                           42099.5
+  15 Vaduz                          Liechtenstein                   43976.5
+  20 South Park                     United States                   49250.2
+  10 Brazzaville                    Republic of the Congo           57309.8
+  14 Shanghai                       People's Republic of China      64637.8
+  18 Nuuk (Godthab)                 Denmark                         70474.3
+   5 Raleigh                        United States                   72732.6
+   2 Hong Kong                      People's Republic of China      81069.0
+   1 Buenos Aires                   Argentina                       92543.4
+   4 London                         United Kingdom                  99457.6
+  19 Timbuktu                       Mali                           101861.7
+
+cmd> quit

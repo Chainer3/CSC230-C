@@ -1,0 +1,68 @@
+cmd> add 4
+
+cmd> add 8
+
+cmd> add 12
+
+cmd> add 16
+
+cmd> add 20
+
+cmd> add 24
+Invalid command
+
+cmd> tour
+  ID Name                           Country                            Dist
+   4 London                         United Kingdom                      0.0
+   8 Southampton                    United Kingdom                     68.8
+  12 Marrakech                      Morocco                          1442.3
+  16 Las Palmas de Gran Canaria     Spain                            1946.6
+  20 South Park                     United States                    6994.7
+
+cmd> remove 4
+
+cmd> remove 5
+Invalid command
+
+cmd> tour
+  ID Name                           Country                            Dist
+   8 Southampton                    United Kingdom                      0.0
+  12 Marrakech                      Morocco                          1373.6
+  16 Las Palmas de Gran Canaria     Spain                            1877.8
+  20 South Park                     United States                    6926.0
+
+cmd> remove 24
+Invalid command
+
+cmd> tour
+  ID Name                           Country                            Dist
+   8 Southampton                    United Kingdom                      0.0
+  12 Marrakech                      Morocco                          1373.6
+  16 Las Palmas de Gran Canaria     Spain                            1877.8
+  20 South Park                     United States                    6926.0
+
+cmd> add fdsjkfj
+Invalid command
+
+cmd> remove zzzzz
+Invalid command
+
+cmd> tour
+  ID Name                           Country                            Dist
+   8 Southampton                    United Kingdom                      0.0
+  12 Marrakech                      Morocco                          1373.6
+  16 Las Palmas de Gran Canaria     Spain                            1877.8
+  20 South Park                     United States                    6926.0
+
+cmd> remove 8
+
+cmd> remove 8
+Invalid command
+
+cmd> tour
+  ID Name                           Country                            Dist
+  12 Marrakech                      Morocco                             0.0
+  16 Las Palmas de Gran Canaria     Spain                             504.2
+  20 South Park                     United States                    5552.4
+
+cmd> quit

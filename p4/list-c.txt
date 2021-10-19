@@ -1,0 +1,15 @@
+Puerto Montt	Chile	-41.467	-72.933
+Bandung	Indonesia	-6.917	107.617
+Southampton	United Kingdom	50.900	-1.400
+Tashkent	Uzbekistan	41.267	69.217
+Brazzaville	Republic of the Congo	-4.267	15.300
+Incheon	South Korea	37.483	126.633
+Marrakech	Morocco	31.633	-8.017
+Siem Reap	Cambodia	13.367	103.867
+Shanghai	People's Republic of China	31.200	121.500
+Vaduz	Liechtenstein	47.133	9.517
+Las Palmas de Gran Canaria	Spain	28.150	-15.417
+Kolkata (Calcutta)	India	22.567	88.367
+Nuuk (Godthab)	Denmark	64.183	-51.733
+Timbuktu	Mali	16.783	-3.017
+South Park	United States	39.222	-105.998

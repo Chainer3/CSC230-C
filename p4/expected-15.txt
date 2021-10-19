@@ -1,0 +1,16 @@
+cmd> list zzzz
+  ID Name                           Country                          Lat    Lon
+
+cmd> list abcdefghijklmnopqrstuvwxyzabcd
+  ID Name                           Country                          Lat    Lon
+
+cmd> list abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+Invalid command
+
+cmd> list too many words
+Invalid command
+
+cmd> nearest 5
+Invalid command
+
+cmd> quit

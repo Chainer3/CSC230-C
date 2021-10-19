@@ -1,0 +1,931 @@
+San Miguel de Tucuman	Argentina	-26.817	-65.217
+Reykjavik	Iceland	64.133	-21.933
+Bucharest	Romania	44.433	26.100
+Thessaloniki	Greece	40.650	22.900
+Zurich	Switzerland	47.367	8.550
+Brussels	Belgium	50.850	4.350
+Stockholm	Sweden	59.333	18.067
+Istanbul	Turkey	41.017	28.950
+Norilsk	Russia	69.333	88.217
+Sao Jose do Rio Preto	Brazil	-20.800	-49.383
+Caracas	Venezuela	10.500	-66.917
+El Paso	United States	31.783	-106.417
+Palermo	Italy	38.117	13.367
+Kawasaki	Japan	35.517	139.700
+Thies	Senegal	14.783	-16.917
+Malmo	Sweden	55.583	13.033
+Taiyuan	People's Republic of China	37.867	112.567
+Eureka	Canada	79.983	-85.933
+Ludhiana	India	30.917	75.850
+Warsaw	Poland	52.233	21.017
+Melbourne	Australia	-37.817	144.967
+Fredericton	Canada	45.950	-66.667
+Jaipur	India	26.933	75.817
+Rawalpindi	Pakistan	33.600	73.033
+Torshavn	Denmark	62.017	-6.767
+Doha	Qatar	25.283	51.533
+Kano	Nigeria	12.000	8.517
+Libreville	Gabon	0.383	9.450
+Simferopol	Russia	44.950	34.100
+Hobart	Australia	-42.883	147.333
+Tucson	United States	32.217	-110.933
+Astana	Kazakhstan	51.167	71.433
+Bissau	Guinea-Bissau	11.850	-15.567
+Phnom Penh	Cambodia	11.550	104.917
+Pristina	Serbia	42.667	21.167
+Queretaro	Mexico	20.583	-100.400
+Hyderabad	Pakistan	25.383	68.367
+Culiacan	Mexico	24.800	-107.383
+Lahti	Finland	60.983	25.650
+Boa Vista	Brazil	2.817	-60.667
+Kumasi	Ghana	6.667	-1.617
+Helena	United States	46.600	-112.033
+Maputo	Mozambique	-25.967	32.583
+Mogadishu	Somalia	2.033	45.350
+Fort-de-France	France	14.600	-61.083
+Nairobi	Kenya	-1.283	36.817
+Tianjin	People's Republic of China	39.133	117.183
+Dammam	Saudi Arabia	26.283	50.200
+Kandy	Sri Lanka	7.300	80.633
+Chengdu	People's Republic of China	30.667	104.067
+Huambo	Angola	-12.767	15.733
+Bloemfontein	South Africa	-29.117	26.217
+Davao City	Philippines	7.067	125.600
+Ipoh	Malaysia	4.600	101.067
+Accra	Ghana	5.550	-0.200
+Guadalajara	Mexico	20.667	-103.350
+Santiago de Cali	Colombia	3.417	-76.517
+George Town	United Kingdom	19.300	-81.383
+Ibiza	Spain	38.983	1.433
+Zagreb	Croatia	45.817	15.983
+Memphis	United States	35.117	-89.967
+Sydney	Australia	-33.867	151.217
+Rotterdam	Netherlands	51.933	4.483
+Denver	United States	39.733	-104.983
+Trenton	United States	40.217	-74.767
+Santo Domingo	Dominican Republic	18.467	-69.950
+Port Elizabeth	South Africa	-33.950	25.600
+Kanpur	India	26.467	80.333
+Praia	Cape Verde	14.917	-23.517
+Lahore	Pakistan	31.550	74.350
+Chaguanas	Trinidad and Tobago	10.500	-61.383
+Aarhus	Denmark	56.150	10.217
+Baku	Azerbaijan	40.400	49.883
+Ostersund	Sweden	63.183	14.667
+Split	Croatia	43.500	16.433
+Almaty	Kazakhstan	43.283	76.900
+Asmara	Eritrea	15.333	38.933
+Podgorica	Montenegro	42.433	19.267
+Noumea	France	-22.283	166.450
+Harare	Zimbabwe	-17.867	31.033
+Portsmouth	United Kingdom	50.817	-1.083
+Kaohsiung	Republic of China (Taiwan)	22.633	120.267
+Zapopan	Mexico	20.717	-103.400
+Tallinn	Estonia	59.433	24.750
+Petropavlovsk-Kamchatsky	Russia	53.017	158.650
+Kota Kinabalu	Malaysia	5.967	116.100
+Udon Thani	Thailand	17.417	102.750
+Sendai	Japan	38.267	140.867
+Cockburn Town	United Kingdom	21.467	-71.133
+Tripoli	Libya	32.900	13.183
+Ushuaia	Argentina	-54.800	-68.300
+Basseterre	Saint Kitts and Nevis	17.300	-62.733
+Miami	United States	25.783	-80.217
+Kochi	India	9.967	76.283
+Toronto	Canada	43.700	-79.400
+Skopje	Macedonia	42.000	21.433
+Malaga	Spain	36.717	-4.417
+Qaanaaq	Denmark	77.467	-69.233
+Esbjerg	Denmark	55.483	8.450
+Gaziantep	Turkey	37.067	37.383
+Trujillo	Peru	-8.117	-79.033
+Campo Grande	Brazil	-20.467	-54.617
+Invercargill	New Zealand	-46.417	168.350
+Latakia	Syria	35.517	35.783
+Jackson	United States	32.300	-90.183
+Qaqortoq	Denmark	60.717	-46.033
+Abidjan	Ivory Coast	5.317	-4.033
+Bordeaux	France	44.833	-0.583
+Porto	Portugal	41.167	-8.617
+Handan	People's Republic of China	36.600	114.483
+Charleroi	Belgium	50.400	4.433
+Krasnoyarsk	Russia	56.017	93.067
+Honiara	Solomon Islands	-9.467	159.817
+Eilat	Israel	29.550	34.950
+Cagliari	Italy	39.250	9.050
+Andorra la Vella	Andorra	42.500	1.500
+Concord	United States	43.200	-71.533
+Fort Wayne	United States	41.083	-85.133
+San Luis Potosi	Mexico	22.150	-100.850
+Ayutthaya	Thailand	14.350	100.567
+Pocos de Caldas	Brazil	-21.783	-46.567
+Srinagar	India	34.083	74.783
+Mosul	Iraq	36.333	43.133
+Campinas	Brazil	-22.900	-47.050
+Yangon	Myanmar	16.800	96.150
+Natal	Brazil	-5.783	-35.200
+Rio Gallegos	Argentina	-51.633	-69.217
+Douala	Cameroon	4.050	9.700
+Hamilton	New Zealand	-37.783	175.283
+Nice	France	43.700	7.267
+Mersin	Turkey	36.800	34.633
+Oranjestad	Netherlands	12.517	-70.033
+Ny-Alesund	Norway	78.917	11.933
+Saint Petersburg	Russia	59.950	30.300
+Tunis	Tunisia	36.800	10.183
+Sitka	United States	57.050	-135.333
+Algiers	Algeria	36.767	3.217
+Manchester	United Kingdom	53.467	-2.233
+Tskhinvali	Georgia	42.233	43.967
+Port-au-Prince	Haiti	18.533	-72.333
+Pudasjarvi	Finland	65.367	27.000
+Chongjin	North Korea	41.800	129.783
+Malacca Town	Malaysia	2.200	102.250
+Naha	Japan	26.217	127.683
+Horta	Portugal	38.583	-28.717
+Knoxville	United States	35.967	-83.950
+Ornskoldsvik	Sweden	63.283	18.733
+Moroni	Comoros	-11.750	43.200
+Medan	Indonesia	3.583	98.667
+Isafjordur	Iceland	66.083	-23.133
+Graz	Austria	47.067	15.433
+Leeds	United Kingdom	53.800	-1.550
+Konya	Turkey	37.867	32.483
+Dusseldorf	Germany	51.233	6.783
+Yekaterinburg	Russia	56.833	60.583
+Cannes	France	43.550	7.017
+Angra do Heroismo	Portugal	38.483	-27.217
+Yaounde	Cameroon	3.867	11.517
+Avarua	New Zealand	-21.200	-159.767
+Leipzig	Germany	51.333	12.383
+Riverside	United States	33.950	-117.400
+Port Said	Egypt	31.250	32.283
+Caruaru	Brazil	-8.283	-35.983
+Tornio	Finland	65.850	24.150
+Vancouver	Canada	49.250	-123.100
+Bhisho	South Africa	-32.850	27.433
+Vienna	Austria	48.217	16.367
+Castries	Saint Lucia	14.017	-60.983
+Francistown	Botswana	-21.167	27.517
+Arkhangelsk	Russia	64.533	40.533
+Lobamba	Swaziland	-26.417	31.167
+Lulea	Sweden	65.583	22.150
+Araraquara	Brazil	-21.800	-48.183
+Dunedin	New Zealand	-45.867	170.500
+Cayenne	France	4.917	-52.333
+Kulpahar	India	25.317	79.633
+Tuktoyaktuk	Canada	69.450	-133.033
+Nzerekore	Guinea	7.750	-8.817
+Vadso	Norway	70.083	29.733
+Fukuoka	Japan	33.583	130.400
+Fernando de Noronha	Brazil	-3.850	-32.417
+Forked River	United States	39.800	-74.100
+Kemijarvi	Finland	66.717	27.433
+Benin City	Nigeria	6.317	5.600
+Helsinki	Finland	60.167	24.933
+Stanley	United Kingdom	-51.700	-57.867
+Busan	South Korea	35.183	129.083
+Belgrade	Serbia	44.817	20.467
+Nanning	People's Republic of China	22.817	108.317
+Djibouti	Djibouti	11.583	43.150
+Stepanakert	Azerbaijan	39.817	46.750
+Dresden	Germany	51.033	13.733
+Kamloops	Canada	50.683	-120.333
+Joao Pessoa	Brazil	-7.083	-34.833
+Malabo	Equatorial Guinea	3.750	8.783
+Antananarivo	Madagascar	-18.933	47.517
+Rouen	France	49.433	1.100
+Cincinnati	United States	39.100	-84.517
+Nottingham	United Kingdom	52.950	-1.133
+Quezon City	Philippines	14.633	121.033
+Comodoro Rivadavia	Argentina	-45.867	-67.483
+Sfax	Tunisia	34.733	10.767
+Liverpool	United Kingdom	53.400	-2.983
+Irkutsk	Russia	52.317	104.300
+Shenzhen	People's Republic of China	22.550	114.100
+Nizhny Novgorod	Russia	56.333	44.000
+Maracay	Venezuela	10.250	-67.600
+Samara	Russia	53.200	50.133
+Perth	Australia	-31.950	115.867
+Wellington	New Zealand	-41.283	174.783
+Hamilton	United Kingdom	32.300	-64.783
+Chittagong	Bangladesh	22.367	91.800
+Kiev	Ukraine	50.450	30.517
+Los Alamos	United States	35.883	-106.300
+Cusco	Peru	-13.533	-71.967
+Kuala Lumpur	Malaysia	3.150	101.700
+Alert	Canada	82.500	-62.333
+Weno	Federated States Micronesia	7.450	151.850
+Prague	Czech Republic	50.083	14.417
+Juba	South Sudan	4.850	31.600
+Kiel	Germany	54.333	10.133
+Strasbourg	France	48.583	7.750
+Trivandrum	India	8.483	76.950
+Kirkuk	Iraq	35.467	44.317
+St. John's	Antigua and Barbuda	17.117	-61.850
+Cairo	Egypt	30.050	31.233
+Sao Jose dos Campos	Brazil	-23.183	-45.883
+Tolyatti	Russia	53.517	49.417
+New Orleans	United States	29.967	-90.050
+Mamoudzou	France	-12.783	45.233
+Gdynia	Poland	54.500	18.550
+Tagbilaran	Philippines	9.650	123.850
+Calama	Chile	-22.467	-68.933
+Birkirkara	Malta	35.900	14.467
+New Delhi	India	28.617	77.217
+Munich	Germany	48.133	11.567
+Kharkiv	Ukraine	50.000	36.233
+Montpelier	United States	44.250	-72.567
+Berlin	Germany	52.517	13.383
+Arica	Chile	-18.483	-70.333
+Hanga Roa	Chile	-27.150	-109.433
+Ndola	Zambia	-12.967	28.633
+Nemuro	Japan	43.333	145.583
+Santiago de Cuba	Cuba	20.017	-75.817
+Liberia	Costa Rica	10.633	-85.433
+Tampa	United States	27.950	-82.467
+Cape Town	South Africa	-33.933	18.417
+Banjul	Gambia	13.450	-16.583
+Virginia Beach	United States	36.850	-75.983
+Bogor	Indonesia	-6.600	106.800
+Gibraltar	United Kingdom	36.133	-5.350
+Road Town	United Kingdom	18.433	-64.617
+Taichung	Republic of China (Taiwan)	24.150	120.667
+Charlottetown	Canada	46.233	-63.150
+Lubumbashi	Democratic Republic of Congo	-11.667	27.467
+Sochi	Russia	43.583	39.717
+Basse-Terre	France	16.000	-61.733
+Ponta Delgada	Portugal	37.817	-25.750
+Moundou	Chad	8.567	16.083
+Pitea	Sweden	65.333	21.500
+Victoria	Seychelles	-4.617	55.450
+Bergen	Norway	60.383	5.333
+Stjordal	Norway	63.483	11.167
+Kuusamo	Finland	65.967	29.183
+Georgetown	Guyana	6.800	-58.167
+Nanjing	People's Republic of China	32.050	118.767
+Quebec City	Canada	46.817	-71.217
+Vantaa	Finland	60.300	25.033
+Haparanda	Sweden	65.833	24.133
+San Fernando	Trinidad and Tobago	10.283	-61.467
+Garanhuns	Brazil	-8.883	-36.500
+Padang	Indonesia	-0.950	100.350
+Concepcion	Chile	-36.833	-73.050
+Temuco	Chile	-38.750	-72.667
+Naples	Italy	40.850	14.267
+Montevideo	Uruguay	-34.883	-56.183
+Cardiff	United Kingdom	51.483	-3.183
+Boden	Sweden	65.833	21.717
+Sheffield	United Kingdom	53.383	-1.467
+Kandahar	Afghanistan	31.617	65.717
+Hilo	United States	19.700	-155.083
+Alexandria	Egypt	31.200	29.917
+Kismayo	Somalia	-0.350	42.550
+Geneva	Switzerland	46.200	6.150
+Key West	United States	24.567	-81.783
+Seattle	United States	47.617	-122.333
+Panama City	Panama	8.983	-79.517
+Nashville	United States	36.167	-86.783
+Nukulaelae	Tuvalu	-9.383	179.850
+Oklahoma City	United States	35.483	-97.533
+Lincoln	United States	40.817	-96.683
+Shillong	India	25.567	91.883
+Dalian	People's Republic of China	38.917	121.633
+Curitiba	Brazil	-25.417	-49.250
+George Town	Malaysia	5.417	100.317
+Brisbane	Australia	-27.467	153.033
+Cartagena	Colombia	10.400	-75.500
+Narvik	Norway	68.417	17.567
+Kuching	Malaysia	1.567	110.350
+Agra	India	27.183	78.017
+Bishkek	Kyrgyzstan	42.867	74.617
+Flores Island	Portugal	39.467	-31.233
+Albuquerque	United States	35.117	-106.617
+Lviv	Ukraine	49.850	24.017
+Da Nang	Vietnam	16.067	108.233
+Linz	Austria	48.300	14.283
+Tehran	Iran	35.700	51.417
+Singapore	Singapore	1.283	103.833
+Kristiansand	Norway	58.167	8.000
+Kaliningrad	Russia	54.717	20.517
+Kingstown	Saint Vincent and Grenadines	13.150	-61.233
+San Francisco	United States	37.783	-122.417
+Lima	Peru	-12.050	-77.033
+Rockhampton	Australia	-23.383	150.517
+Brest	France	48.383	-4.483
+Gweru	Zimbabwe	-19.450	29.800
+San Salvador	El Salvador	13.683	-89.183
+Pune	India	18.517	73.850
+Guayaquil	Ecuador	-2.183	-79.883
+Cambridge	United Kingdom	52.200	0.117
+Mecca	Saudi Arabia	21.417	39.817
+Lausanne	Switzerland	46.517	6.633
+Kyoto	Japan	35.017	135.767
+Auckland	New Zealand	-36.833	174.733
+Miri	Malaysia	4.400	114.000
+Moscow	Russia	55.750	37.617
+Zanzibar City	Tanzania	-6.167	39.200
+Adelaide	Australia	-34.933	138.600
+Vientiane	Laos	17.967	102.600
+Montreal	Canada	45.500	-73.567
+Dakar	Senegal	14.700	-17.450
+Riga	Latvia	56.950	24.100
+Kobe	Japan	34.683	135.200
+Leiden	Netherlands	52.167	4.483
+Basra	Iraq	30.500	47.817
+San Marino	San Marino	43.933	12.450
+Lilongwe	Malawi	-13.983	33.783
+Qingdao	People's Republic of China	36.067	120.383
+Florence	Italy	43.783	11.250
+Glasgow	United Kingdom	55.850	-4.267
+Phuket	Thailand	7.883	98.400
+Florianopolis	Brazil	-27.833	-48.417
+Yakutsk	Russia	62.033	129.733
+Hamburg	Germany	53.567	10.000
+Nantes	France	47.217	-1.550
+Nuorgam	Finland	70.083	27.883
+Chui	Brazil	-33.683	-53.450
+Banda Aceh	Indonesia	5.550	95.317
+Hermosillo	Mexico	29.100	-110.950
+Puntarenas	Costa Rica	9.967	-84.833
+Windsor	Canada	42.283	-83.000
+Melekeok	Palau	7.483	134.600
+Detroit	United States	42.333	-83.050
+Toulouse	France	43.600	1.450
+Belem	Brazil	-1.450	-48.500
+Brighton and Hove	United Kingdom	50.833	-0.150
+Chisinau	Moldova	47.000	28.917
+Patna	India	25.617	85.150
+Aberdeen	United Kingdom	57.150	-2.117
+Abu Dhabi	United Arab Emirates	24.467	54.367
+Salt Lake City	United States	40.750	-111.883
+Augusta	United States	44.317	-69.783
+Whitehorse	Canada	60.717	-135.050
+Ensenada	Mexico	31.850	-116.600
+Rabi Island	Fiji	-16.500	-180.000
+Hue	Vietnam	16.467	107.583
+Casablanca	Morocco	33.533	-7.583
+Buffalo	United States	42.900	-78.850
+Izmir	Turkey	38.433	27.150
+Copiapo	Chile	-27.367	-70.333
+Funafuti	Tuvalu	-8.517	179.217
+Mombasa	Kenya	-4.050	39.667
+Sana'a	Yemen	15.350	44.200
+Phoenix	United States	33.450	-112.067
+Bobo-Dioulasso	Burkina Faso	11.183	-4.283
+Thunder Bay	Canada	48.383	-89.250
+Hat Yai	Thailand	7.017	100.467
+Makati	Philippines	14.550	121.033
+Bodo	Norway	67.300	14.550
+Imperatriz	Brazil	-5.533	-47.483
+Townsville	Australia	-19.250	146.817
+Voronezh	Russia	51.667	39.217
+Serekunda	Gambia	13.433	-16.667
+Zhengzhou	People's Republic of China	34.767	113.650
+Iquitos	Peru	-3.733	-73.250
+Dushanbe	Tajikistan	38.533	68.783
+Chihuahua	Mexico	28.633	-106.083
+Bangui	Central African Republic	4.367	18.583
+Sobral	Brazil	-3.667	-40.233
+Tirana	Albania	41.333	19.817
+Shigatse	People's Republic of China	29.267	88.883
+Fairbanks	United States	64.850	-147.717
+Paramaribo	Suriname	5.867	-55.167
+Recife	Brazil	-8.050	-34.900
+Vaasa	Finland	63.100	21.617
+Tokyo	Japan	35.683	139.700
+Dededo	United States	13.517	144.833
+Minneapolis	United States	44.983	-93.267
+Rostov-on-Don	Russia	47.233	39.700
+Kazan	Russia	55.783	49.133
+Macau	People's Republic of China	22.167	113.550
+Edmonton	Canada	53.533	-113.500
+Porto-Novo	Benin	6.500	2.600
+Greenwich	United Kingdom	51.483	0.000
+Bratsk	Russia	56.117	101.600
+Suez	Egypt	29.967	32.550
+Sarajevo	Bosnia and Herzegovina	43.850	18.350
+Dubai	United Arab Emirates	25.250	55.300
+Tapachula	Mexico	14.900	-92.267
+Saint John	Canada	45.283	-66.083
+Hargeisa	Somalia	9.567	44.067
+Sevilla	Spain	37.383	-5.983
+Hannover	Germany	52.367	9.717
+Cheyenne	United States	41.150	-104.800
+Vladivostok	Russia	43.133	131.900
+Palembang	Indonesia	-2.983	104.750
+Ayacucho	Peru	-13.167	-74.217
+Salzburg	Austria	47.800	13.033
+Medina	Saudi Arabia	24.467	39.600
+Pelotas	Brazil	-31.767	-52.350
+Dundee	United Kingdom	56.467	-2.967
+Barrow	United States	71.300	-156.767
+Tartu	Estonia	58.383	26.717
+Dili	Timor-Leste	-8.550	125.583
+Monaco	Monaco	43.733	7.417
+Yaren District	Nauru	-0.550	166.917
+Naypyidaw	Myanmar	19.750	96.100
+Santiago	Chile	-33.450	-70.667
+Xi'an	People's Republic of China	34.267	108.900
+Juneau	United States	58.300	-134.417
+Lleida	Spain	41.617	0.633
+Yamoussoukro	Ivory Coast	6.817	-5.283
+Bangkok	Thailand	13.750	100.467
+Dibrugarh	India	27.483	95.000
+Harbin	People's Republic of China	45.750	126.633
+Mendoza	Argentina	-32.883	-68.817
+Sinop	Brazil	-11.850	-55.650
+Teresina	Brazil	-5.100	-42.800
+Hanoi	Vietnam	21.033	105.850
+Belize City	Belize	17.500	-88.183
+Jeddah	Saudi Arabia	21.550	39.167
+Port Vila	Vanuatu	-17.750	168.300
+Longyearbyen	Norway	78.217	15.650
+Alajuela	Costa Rica	10.017	-84.217
+Adamstown	United Kingdom	-25.067	-130.100
+Guangzhou	People's Republic of China	23.133	113.267
+Tabriz	Iran	38.067	46.300
+Ciudad Bolivar	Venezuela	8.117	-63.550
+Entebbe	Uganda	0.050	32.467
+Jayapura	Indonesia	-2.533	140.717
+Dodoma	Tanzania	-6.167	35.750
+Urumqi	People's Republic of China	43.833	87.600
+Nord	Denmark	81.600	-16.667
+Windhoek	Namibia	-22.567	17.083
+Pyongyang	North Korea	39.017	125.733
+Labasa	Fiji	-16.433	179.367
+Santa Cruz de Tenerife	Spain	28.467	-16.250
+Pietermaritzburg	South Africa	-29.617	30.383
+Isfahan	Iran	32.633	51.650
+Bristol	United Kingdom	51.450	-2.583
+Douglas	United Kingdom	54.150	-4.483
+Winnipeg	Canada	49.900	-97.133
+Austin	United States	30.250	-97.750
+Hammerfest	Norway	70.667	23.683
+Plymouth	United Kingdom	50.367	-4.150
+Yogyakarta	Indonesia	-7.800	110.367
+Grytviken	United Kingdom	-54.283	-36.500
+Verkhoyansk	Russia	67.550	133.383
+Valencia	Spain	39.467	-0.383
+Dover	United States	39.167	-75.533
+Coventry	United Kingdom	52.400	-1.517
+Fort McMurray	Canada	56.733	-111.383
+Ghent	Belgium	51.050	3.733
+Johor Bahru	Malaysia	1.483	103.733
+Luxembourg	Luxembourg	49.617	6.117
+Barranquilla	Colombia	10.967	-74.800
+Groningen	Netherlands	53.217	6.550
+Tainan	Republic of China (Taiwan)	22.983	120.183
+Le Havre	France	49.483	0.100
+Mwanza	Tanzania	-2.517	32.900
+Quito	Ecuador	-0.250	-78.583
+Rosario	Argentina	-32.950	-60.667
+Hyderabad	India	17.367	78.483
+San Carlos de Bariloche	Argentina	-41.150	-71.300
+Taipei	Republic of China (Taiwan)	25.033	121.633
+Oulu	Finland	65.017	25.467
+Khartoum	Sudan	15.633	32.533
+Turku	Finland	60.450	22.267
+Yaroslavl	Russia	57.617	39.850
+Peshawar	Pakistan	34.017	71.583
+Ciudad del Este	Paraguay	-25.517	-54.617
+Moncton	Canada	46.133	-64.767
+Luxor	Egypt	25.683	32.650
+Mexicali	Mexico	32.667	-115.467
+Sao Tome	Sao Tome and Principe	0.333	6.683
+Umea	Sweden	63.833	20.267
+Tiaret	Algeria	35.367	1.317
+Edinburgh	United Kingdom	55.950	-3.183
+Maracaibo	Venezuela	10.650	-71.633
+Sacramento	United States	38.550	-121.467
+Zamboanga City	Philippines	6.900	122.067
+Barcelona	Spain	41.383	2.183
+Houston	United States	29.767	-95.383
+Cairns	Australia	-16.933	145.783
+Hartford	United States	41.767	-72.667
+Mbabane	Swaziland	-26.317	31.133
+Frankfurt am Main	Germany	50.117	8.683
+The Valley	United Kingdom	18.217	-63.050
+Iloilo City	Philippines	10.717	122.567
+Ciudad Juarez	Mexico	31.733	-106.483
+Mandurah	Australia	-32.533	115.717
+Bauru	Brazil	-22.317	-49.067
+Volgograd	Russia	48.700	44.517
+Saint-Denis	France	-20.883	55.450
+Anchorage	United States	61.217	-149.900
+Lillehammer	Norway	61.133	10.433
+Freetown	Sierra Leone	8.483	-13.233
+Kunming	People's Republic of China	25.067	102.683
+Odessa	Ukraine	46.467	30.733
+Gaborone	Botswana	-24.650	25.917
+Kota Bharu	Malaysia	6.133	102.250
+Pago Pago	United States	-14.283	-170.700
+Jerusalem	Israel	31.783	35.217
+Nassau	Bahamas	25.067	-77.333
+Lhasa	People's Republic of China	29.650	91.100
+Sri Jayawardenapura-Kotte	Sri Lanka	6.917	79.883
+Portland	United States	45.517	-122.683
+Utrecht	Netherlands	52.100	5.117
+Jinan	People's Republic of China	36.667	116.983
+Atlanta	United States	33.750	-84.383
+Victoria	Canada	48.433	-123.367
+Columbus	United States	39.983	-82.983
+Conakry	Guinea	9.517	-13.717
+St. George's	Grenada	12.050	-61.750
+Karachi	Pakistan	24.867	67.017
+Mobile	United States	30.700	-88.050
+Pontianak	Indonesia	-0.017	109.333
+Omsk	Russia	54.983	73.367
+Kampala	Uganda	0.317	32.583
+Hastings	New Zealand	-39.650	176.833
+Macapa	Brazil	0.033	-51.067
+Sao Paulo	Brazil	-23.550	-46.633
+Izhevsk	Russia	56.833	53.183
+Boise	United States	43.617	-116.200
+Tiraspol	Moldova	46.850	29.633
+Gloucester	United Kingdom	51.867	-2.233
+Benghazi	Libya	32.117	20.067
+Siliguri	India	26.717	88.433
+Hagatna	United States	13.483	144.750
+Khon Kaen	Thailand	16.433	102.833
+Utsjoki	Finland	69.900	27.017
+Tel Aviv	Israel	32.067	34.783
+Alor Setar	Malaysia	6.117	100.367
+Mumbai (Bombay)	India	18.983	72.833
+Livingstone	Zambia	-17.850	25.867
+Tampico	Mexico	22.250	-97.867
+Oxford	United Kingdom	51.750	-1.250
+Maseru	Lesotho	-29.317	27.483
+Kuwait City	Kuwait	29.367	47.983
+Columbia	United States	34.000	-81.050
+Birmingham	United States	33.650	-86.817
+Belo Horizonte	Brazil	-19.917	-43.933
+Antofagasta	Chile	-23.650	-70.400
+Catania	Italy	37.500	15.083
+Bandar Seri Begawan	Brunei	4.883	114.950
+Makassar	Indonesia	-5.133	119.417
+Male	Maldives	4.183	73.517
+Sofia	Bulgaria	42.700	23.333
+Muscat	Oman	23.617	58.600
+Pierre	United States	44.367	-100.333
+Shijiazhuang	People's Republic of China	38.050	114.500
+Kiruna	Sweden	67.850	20.217
+Monrovia	Liberia	6.317	-10.800
+Skelleftea	Sweden	64.750	20.950
+Ulaanbaatar	Mongolia	47.917	106.917
+Beirut	Lebanon	33.883	35.517
+Cebu City	Philippines	10.283	123.900
+Acapulco	Mexico	16.867	-99.883
+Leon	Mexico	21.117	-101.683
+Magadan	Russia	59.567	150.800
+Dallas	United States	32.783	-96.800
+Port Hedland	Australia	-20.317	118.600
+Quetzaltenango	Guatemala	14.833	-91.517
+Norwich	United Kingdom	52.633	1.300
+Managua	Nicaragua	12.133	-86.250
+Bahia Blanca	Argentina	-38.717	-62.267
+Trondheim	Norway	63.433	10.400
+Maceio	Brazil	-9.667	-35.733
+Milan	Italy	45.467	9.183
+Palma	Spain	39.567	2.650
+Puerto Ayacucho	Venezuela	5.667	-67.633
+Antwerp	Belgium	51.217	4.400
+Faisalabad	Pakistan	31.417	73.083
+Petrolina	Brazil	-9.400	-40.500
+Orlando	United States	28.417	-81.300
+Nakhon Ratchasima	Thailand	14.983	102.100
+Kansas City	United States	39.100	-94.583
+Porto Velho	Brazil	-8.767	-63.900
+Saint-Pierre	France	46.783	-56.183
+Indianapolis	United States	39.767	-86.150
+Blantyre	Malawi	-15.783	35.000
+Kemi	Finland	65.733	24.567
+Halifax	Canada	44.850	-63.200
+Charlotte Amalie	United States	18.350	-64.950
+Salalah	Oman	17.017	54.083
+Yerevan	Armenia	40.183	44.517
+Rio Branco	Brazil	-9.967	-67.817
+Little Rock	United States	34.733	-92.333
+Maastricht	Netherlands	50.850	5.683
+Tromso	Norway	69.683	18.950
+Providence	United States	41.817	-71.417
+Juazeiro do Norte	Brazil	-7.200	-39.333
+Wichita	United States	37.683	-97.333
+Polokwane	South Africa	-23.900	29.450
+Cotonou	Benin	6.367	2.433
+Baghdad	Iraq	33.333	44.433
+Malang	Indonesia	-7.983	112.617
+Ibadan	Nigeria	7.400	3.917
+Boston	United States	42.350	-71.067
+Rome	Italy	41.900	12.500
+Cordoba	Argentina	-31.417	-64.183
+Chiang Rai	Thailand	19.917	99.833
+Chinandega	Nicaragua	12.617	-87.150
+Adak	United States	51.883	-176.650
+Amritsar	India	31.633	74.867
+Balikpapan	Indonesia	-1.267	116.833
+Swansea	United Kingdom	51.617	-3.950
+Baltimore	United States	39.283	-76.617
+Calgary	Canada	51.050	-114.067
+Limon	Costa Rica	9.983	-83.033
+Cluj-Napoca	Romania	46.767	23.583
+Las Vegas	United States	36.183	-115.133
+Sudbury	Canada	46.483	-81.017
+Changchun	People's Republic of China	43.900	125.200
+Lusaka	Zambia	-15.417	28.283
+Anadyr	Russia	64.733	177.517
+Bursa	Turkey	40.183	29.050
+Dar es Salaam	Tanzania	-6.800	39.283
+Honolulu	United States	21.317	-157.833
+Kingston	Jamaica	17.983	-76.800
+Manila	Philippines	14.583	120.967
+Funchal	Portugal	32.650	-16.917
+Ottawa	Canada	45.417	-75.683
+Exeter	United Kingdom	50.717	-3.533
+Venice	Italy	45.433	12.333
+Halkida	Greece	38.467	23.600
+Nelspruit	South Africa	-25.467	30.983
+Palikir	Federated States Micronesia	6.917	158.167
+Semarang	Indonesia	-6.967	110.417
+Pekanbaru	Indonesia	0.533	101.450
+Eskisehir	Turkey	39.783	30.517
+Osaka	Japan	34.700	135.500
+Rabat	Morocco	34.033	-6.833
+Cuiaba	Brazil	-15.600	-56.100
+Budapest	Hungary	47.467	19.050
+Lome	Togo	6.133	1.217
+N'Djamena	Chad	12.117	15.050
+San Juan	United States	18.450	-66.067
+Cancun	Mexico	21.167	-86.850
+Brasilia	Brazil	-15.800	-47.867
+Juiz de Fora	Brazil	-21.767	-43.350
+Iqaluit	Canada	63.750	-68.517
+Kingston	Australia	-29.067	167.967
+Basel	Switzerland	47.567	7.600
+Saratov	Russia	51.533	46.017
+Willemstad	Netherlands	12.117	-68.933
+Tijuana	Mexico	32.533	-117.033
+Nagpur	India	21.133	79.083
+Puebla	Mexico	19.050	-98.217
+Birmingham	United Kingdom	52.483	-1.900
+Bogota	Colombia	4.600	-74.083
+Palmas	Brazil	-10.183	-48.333
+Tampere	Finland	61.500	23.767
+Cucuta	Colombia	7.900	-72.500
+Porto Alegre	Brazil	-30.033	-51.233
+Denpasar	Indonesia	-8.650	115.217
+Bilbao	Spain	43.250	-2.917
+Rochester	United States	43.167	-77.617
+Brikama	Gambia	13.267	-16.650
+Port Blair	India	11.667	92.767
+Ufa	Russia	54.750	55.967
+Sault Ste. Marie	Canada	46.533	-84.350
+Turin	Italy	45.067	7.700
+Messina	Italy	38.183	15.550
+Lyon	France	45.767	4.850
+Cork	Ireland	51.900	-8.467
+Jacksonville	United States	30.333	-81.667
+Rovaniemi	Finland	66.500	25.733
+Pittsburgh	United States	40.450	-80.000
+Amsterdam	Netherlands	52.367	4.900
+Iquique	Chile	-20.217	-70.150
+Wonsan	North Korea	39.150	127.450
+Bujumbura	Burundi	-3.383	29.367
+Enugu	Nigeria	6.450	7.517
+Kigali	Rwanda	-1.950	30.067
+Chicago	United States	41.883	-87.633
+Salta	Argentina	-24.783	-65.417
+Veracruz	Mexico	19.183	-96.150
+St. Louis	United States	38.633	-90.200
+Copenhagen	Denmark	55.683	12.567
+Newcastle	Australia	-32.917	151.750
+Medellin	Colombia	6.233	-75.583
+Guwahati	India	26.183	91.733
+Visakhapatnam	India	17.683	83.217
+Port Louis	Mauritius	-20.167	57.500
+Ribeirao Preto	Brazil	-21.183	-47.800
+Sundsvall	Sweden	62.400	17.317
+Valdivia	Chile	-39.817	-73.250
+Jamestown	United Kingdom	-15.917	-5.717
+Havana	Cuba	23.133	-82.383
+Bratislava	Slovakia	48.150	17.117
+Nicosia	Cyprus	35.167	33.367
+Norrkoping	Sweden	58.600	16.200
+Upernavik	Denmark	72.783	-56.150
+Inverness	United Kingdom	57.467	-4.233
+Apia	Samoa	-13.833	-171.750
+New York City	United States	40.667	-73.933
+Bremen	Germany	53.083	8.800
+La Paz	Bolivia	-16.500	-68.150
+Dongguan	People's Republic of China	23.033	113.717
+Canberra	Australia	-35.300	149.117
+Surat	India	21.167	72.833
+Merida	Mexico	20.967	-89.617
+Leicester	United Kingdom	52.633	-1.133
+Santa Barbara	United States	34.433	-119.717
+Manzini	Swaziland	-26.483	31.367
+Tegucigalpa	Honduras	14.100	-87.217
+Sarpsborg	Norway	59.283	11.200
+Ho Chi Minh City	Vietnam	10.767	106.683
+Port Moresby	Papua New Guinea	-9.517	147.217
+Boulder	United States	40.017	-105.283
+Governador Valadares	Brazil	-18.850	-41.933
+Jakarta	Indonesia	-6.200	106.800
+Hangzhou	People's Republic of China	30.250	120.167
+Adana	Turkey	37.000	35.317
+Arequipa	Peru	-16.400	-71.533
+Ankara	Turkey	39.933	32.867
+Jyvaskyla	Finland	62.250	25.750
+Asuncion	Paraguay	-25.283	-57.633
+Niamey	Niger	13.517	2.100
+Sao Luis	Brazil	-2.533	-44.300
+Minsk	Belarus	53.900	27.567
+Louisville	United States	38.250	-85.767
+Milwaukee	United States	43.050	-87.950
+Daegu	South Korea	35.867	128.600
+Guatemala City	Guatemala	14.617	-90.533
+Mafikeng	South Africa	-25.850	25.633
+Marseille	France	43.300	5.367
+Gangtok	India	27.333	88.617
+Bern	Switzerland	46.950	7.450
+El Aaiun	Morocco	27.150	-13.200
+Hiroshima	Japan	34.383	132.450
+Christchurch	New Zealand	-43.533	172.617
+Peterborough	United Kingdom	52.583	-0.250
+Cabo San Lucas	Mexico	22.883	-109.917
+Nouakchott	Mauritania	18.100	-15.950
+Riyadh	Saudi Arabia	24.633	46.717
+Roseau	Dominica	15.300	-61.383
+Yellowknife	Canada	62.450	-114.400
+Krasnodar	Russia	45.033	38.967
+Agartala	India	23.833	91.267
+Puerto Aisen	Chile	-45.400	-72.683
+Dublin	Ireland	53.350	-6.267
+Nagoya	Japan	35.183	136.900
+Ashgabat	Turkmenistan	37.933	58.367
+Valparaiso	Chile	-33.050	-71.617
+Newcastle upon Tyne	United Kingdom	54.967	-1.617
+Yarmouth	Canada	43.833	-66.117
+Zaragoza	Spain	41.650	-0.883
+Kuopio	Finland	62.900	27.683
+Koulikoro	Mali	12.867	-7.567
+Ljubljana	Slovenia	46.050	14.517
+Alofi	New Zealand	-19.050	-169.917
+Mutare	Zimbabwe	-18.967	32.633
+Nuku,alofa	Tonga	-21.133	-175.200
+Tezpur	India	26.633	92.800
+Ambon	Indonesia	-3.700	128.167
+Surat Thani	Thailand	9.133	99.333
+Puerto Vallarta	Mexico	20.667	-105.267
+Pattaya	Thailand	12.933	100.883
+Calais	France	50.950	1.850
+Bulawayo	Zimbabwe	-20.167	28.583
+Paris	France	48.850	2.350
+Majuro	Marshall Islands	7.067	171.267
+Mexico City Mexico City	Mexico	19.433	-99.133
+Oslo	Norway	59.950	10.750
+Shimla	India	31.100	77.167
+Thimphu	Bhutan	27.467	89.650
+Novosibirsk	Russia	55.017	82.933
+Philadelphia	United States	39.950	-75.167
+San Jose	Costa Rica	9.933	-84.083
+Saipan	United States	15.183	145.750
+Shenyang	People's Republic of China	41.800	123.400
+Manaus	Brazil	-3.100	-60.017
+The Hague	Netherlands	52.083	4.317
+Sucre	Bolivia	-19.050	-65.250
+Goiania	Brazil	-16.667	-49.250
+Enschede	Netherlands	52.217	6.900
+Odense	Denmark	55.400	10.383
+Athena	Greece	37.967	23.717
+Deadhorse	United States	70.200	-148.517
+Coihaique	Chile	-45.567	-72.067
+Lisbon	Portugal	38.717	-9.133
+Jersey City	United States	40.717	-74.067
+Chennai (Madras)	India	13.083	80.267
+Akureyri	Iceland	65.683	-18.100
+Chandigarh	India	30.750	76.783
+Gdansk	Poland	54.367	18.633
+Aracaju	Brazil	-10.917	-37.050
+Vatican City	Vatican City	41.900	12.450
+Rio de Janeiro	Brazil	-22.917	-43.200
+Punta Arenas	Chile	-53.167	-70.933
+Heraklion	Greece	35.333	25.133
+Ahmedabad	India	23.033	72.583
+Belmopan	Belize	17.250	-88.767
+Ilheus	Brazil	-14.783	-39.050
+Salvador	Brazil	-12.967	-38.483
+Wilmington	United States	34.217	-77.917
+Puerto Toro	Chile	-55.083	-67.083
+Cleveland	United States	41.483	-81.667
+Damascus	Syria	33.517	36.300
+Belfast	United Kingdom	54.600	-5.933
+Assis	Brazil	-22.667	-50.417
+Vitoria	Brazil	-20.317	-40.333
+Bangalore	India	12.967	77.567
+Grise Fiord	Canada	76.417	-82.900
+Bismarck	United States	46.817	-100.783
+Charleston	United States	38.350	-81.633
+Trelew	Argentina	-43.250	-65.300
+San Antonio	United States	29.417	-98.500
+Murmansk	Russia	68.967	33.083
+Lagos	Nigeria	6.450	3.400
+Monterrey	Mexico	25.667	-100.300
+South Tarawa	Kiribati	1.433	173.000
+Batticaloa	Sri Lanka	7.717	81.700
+Bath	United Kingdom	51.383	-2.367
+Wuhan	People's Republic of China	30.583	114.283
+Addis Ababa	Ethiopia	9.033	38.733
+Haarlem	Netherlands	52.383	4.633
+Mashhad	Iran	36.300	59.600
+Craiova	Romania	44.333	23.817
+Hai Phong	Vietnam	20.850	106.683
+Valletta	Malta	35.900	14.517
+La Serena	Chile	-29.900	-71.250
+Xining	People's Republic of China	36.633	101.767
+St. John's	Canada	47.567	-52.700
+Suva	Fiji	-18.133	178.450
+Grande Prairie	Canada	55.167	-118.800
+Luanda	Angola	-8.833	13.233
+Lucknow	India	26.850	80.950
+Mata-Utu	France	-13.283	-176.183
+Darwin	Australia	-12.450	130.833
+Bologna	Italy	44.500	11.350
+Bradford	United Kingdom	53.800	-1.750
+Kinshasa	Democratic Republic of Congo	-4.333	15.317
+Gaza	Palestine	31.517	34.450
+Durban	South Africa	-29.883	31.050
+Cologne	Germany	50.933	6.967
+Espoo	Finland	60.200	24.650
+Tbilisi	Georgia	41.717	44.783
+Tulsa	United States	36.133	-95.933
+Puerto Williams	Chile	-54.933	-67.617
+Kaesong	North Korea	37.967	126.550
+Seoul	South Korea	37.567	126.983
+Aguascalientes	Mexico	21.883	-102.300
+Multan	Pakistan	30.200	71.467
+Chongqing	People's Republic of China	29.567	106.567
+Kelowna	Canada	49.883	-119.500
+Wollongong	Australia	-34.433	150.883
+Beijing	People's Republic of China	39.917	116.383
+Regina	Canada	50.450	-104.600
+Sabha	Libya	27.033	14.433
+Namangan	Uzbekistan	41.000	71.667
+Perm	Russia	58.000	56.317
+Uppsala	Sweden	59.850	17.650
+Abuja	Nigeria	9.067	7.483
+Innsbruck	Austria	47.267	11.383
+Surabaya	Indonesia	-7.267	112.750
+Manama	Bahrain	26.217	50.583
+Washington	United States	38.900	-77.033
+Ouagadougou	Burkina Faso	12.350	-1.533
+Nukus	Uzbekistan	42.467	59.600
+Omdurman	Sudan	15.650	32.483
+Vilnius	Lithuania	54.683	25.283
+Colombo	Sri Lanka	6.933	79.850
+Stuttgart	Germany	48.783	9.183
+Campina Grande	Brazil	-7.233	-35.883
+Dhaka	Bangladesh	23.700	90.383
+Geelong	Australia	-38.150	144.350
+Islamabad	Pakistan	33.717	73.067
+Bamako	Mali	12.650	-8.000
+Charlotte	United States	35.233	-80.850
+Kathmandu	Nepal	27.700	85.333
+Sekondi-Takoradi	Ghana	4.917	-1.767
+Amman	Jordan	31.933	35.933
+Bridgetown	Barbados	13.100	-59.617
+Durango	Mexico	24.017	-104.667
+Fortaleza	Brazil	-3.717	-38.550
+Sapporo	Japan	43.067	141.350
+Krakow	Poland	50.067	19.933
+Lanzhou	People's Republic of China	36.033	103.800
+Torreon	Mexico	25.533	-103.450
+Saskatoon	Canada	52.133	-106.683
+Chiang Mai	Thailand	18.800	99.000
+Santa Fe	United States	35.667	-105.967
+North Bay	Canada	46.300	-79.450
+Madrid	Spain	40.383	-3.717
+Gothenburg	Sweden	57.700	11.967
+Tamale	Ghana	9.400	-0.850
+Nelson	New Zealand	-41.267	173.283
+Port Harcourt	Nigeria	4.750	7.000
+Orleans	France	47.900	1.917
+Koror	Palau	7.367	134.483
+Sukhumi	Georgia	43.000	41.017
+Novi Sad	Serbia	45.250	19.850
+Port of Spain	Trinidad and Tobago	10.667	-61.517
+Pretoria	South Africa	-25.750	28.183
+Des Moines	United States	41.583	-93.617
+Santa Cruz de la Sierra	Bolivia	-17.800	-63.167
+San Diego	United States	32.717	-117.167
+Papeete	France	-17.533	-149.567
+Los Angeles	United States	34.050	-118.250
+Kimberley	South Africa	-28.750	24.767
+Reno	United States	39.533	-119.817
+Chelyabinsk	Russia	55.150	61.383
+Springfield	United States	37.200	-93.283
+Uberlandia	Brazil	-18.917	-48.283
+Yokohama	Japan	35.450	139.633
+Kabul	Afghanistan	34.533	69.167
+Gold Coast	Australia	-28.017	153.400
+Arbil	Iraq	36.183	44.017

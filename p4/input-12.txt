@@ -1,0 +1,4 @@
+list New
+list new
+list NEW
+quit

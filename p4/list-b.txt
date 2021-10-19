@@ -1,0 +1,5 @@
+Buenos Aires	Argentina	-34.600	-58.383
+Hong Kong	People's Republic of China	22.283	114.167
+Johannesburg	South Africa	-26.200	28.050
+London	United Kingdom	51.500	-0.133
+Raleigh	United States	35.817	-78.650

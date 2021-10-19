@@ -1,0 +1,22 @@
+cmd> list Finland
+  ID Name                           Country                          Lat    Lon
+ 879 Espoo                          Finland                         60.2   24.6
+ 205 Helsinki                       Finland                         60.2   24.9
+ 758 Jyvaskyla                      Finland                         62.2   25.8
+ 622 Kemi                           Finland                         65.7   24.6
+ 203 Kemijarvi                      Finland                         66.7   27.4
+ 790 Kuopio                         Finland                         62.9   27.7
+ 284 Kuusamo                        Finland                         66.0   29.2
+  59 Lahti                          Finland                         61.0   25.6
+ 366 Nuorgam                        Finland                         70.1   27.9
+ 506 Oulu                           Finland                         65.0   25.5
+ 161 Pudasjarvi                     Finland                         65.4   27.0
+ 708 Rovaniemi                      Finland                         66.5   25.7
+ 693 Tampere                        Finland                         61.5   23.8
+ 184 Tornio                         Finland                         65.8   24.1
+ 508 Turku                          Finland                         60.5   22.3
+ 571 Utsjoki                        Finland                         69.9   27.0
+ 415 Vaasa                          Finland                         63.1   21.6
+ 288 Vantaa                         Finland                         60.3   25.0
+
+cmd> quit

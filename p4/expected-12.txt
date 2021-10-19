@@ -1,0 +1,58 @@
+cmd> list New
+  ID Name                           Country                          Lat    Lon
+ 793 Alofi                          New Zealand                    -19.1 -169.9
+ 344 Auckland                       New Zealand                    -36.8  174.7
+ 179 Avarua                         New Zealand                    -21.2 -159.8
+ 773 Christchurch                   New Zealand                    -43.5  172.6
+ 194 Dunedin                        New Zealand                    -45.9  170.5
+ 149 Hamilton                       New Zealand                    -37.8  175.3
+ 560 Hastings                       New Zealand                    -39.6  176.8
+ 123 Invercargill                   New Zealand                    -46.4  168.3
+ 930 Nelson                         New Zealand                    -41.3  173.3
+ 255 New Delhi                      India                           28.6   77.2
+ 249 New Orleans                    United States                   30.0  -90.0
+ 737 New York City                  United States                   40.7  -73.9
+ 721 Newcastle                      Australia                      -32.9  151.8
+ 787 Newcastle upon Tyne            United Kingdom                  55.0   -1.6
+ 750 Port Moresby                   Papua New Guinea                -9.5  147.2
+ 230 Wellington                     New Zealand                    -41.3  174.8
+
+cmd> list new
+  ID Name                           Country                          Lat    Lon
+ 793 Alofi                          New Zealand                    -19.1 -169.9
+ 344 Auckland                       New Zealand                    -36.8  174.7
+ 179 Avarua                         New Zealand                    -21.2 -159.8
+ 773 Christchurch                   New Zealand                    -43.5  172.6
+ 194 Dunedin                        New Zealand                    -45.9  170.5
+ 149 Hamilton                       New Zealand                    -37.8  175.3
+ 560 Hastings                       New Zealand                    -39.6  176.8
+ 123 Invercargill                   New Zealand                    -46.4  168.3
+ 930 Nelson                         New Zealand                    -41.3  173.3
+ 255 New Delhi                      India                           28.6   77.2
+ 249 New Orleans                    United States                   30.0  -90.0
+ 737 New York City                  United States                   40.7  -73.9
+ 721 Newcastle                      Australia                      -32.9  151.8
+ 787 Newcastle upon Tyne            United Kingdom                  55.0   -1.6
+ 750 Port Moresby                   Papua New Guinea                -9.5  147.2
+ 230 Wellington                     New Zealand                    -41.3  174.8
+
+cmd> list NEW
+  ID Name                           Country                          Lat    Lon
+ 793 Alofi                          New Zealand                    -19.1 -169.9
+ 344 Auckland                       New Zealand                    -36.8  174.7
+ 179 Avarua                         New Zealand                    -21.2 -159.8
+ 773 Christchurch                   New Zealand                    -43.5  172.6
+ 194 Dunedin                        New Zealand                    -45.9  170.5
+ 149 Hamilton                       New Zealand                    -37.8  175.3
+ 560 Hastings                       New Zealand                    -39.6  176.8
+ 123 Invercargill                   New Zealand                    -46.4  168.3
+ 930 Nelson                         New Zealand                    -41.3  173.3
+ 255 New Delhi                      India                           28.6   77.2
+ 249 New Orleans                    United States                   30.0  -90.0
+ 737 New York City                  United States                   40.7  -73.9
+ 721 Newcastle                      Australia                      -32.9  151.8
+ 787 Newcastle upon Tyne            United Kingdom                  55.0   -1.6
+ 750 Port Moresby                   Papua New Guinea                -9.5  147.2
+ 230 Wellington                     New Zealand                    -41.3  174.8
+
+cmd> quit

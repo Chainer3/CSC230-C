@@ -1,0 +1,10 @@
+cmd> list
+  ID Name                           Country                          Lat    Lon
+   1 Buenos Aires                   Argentina                      -34.6  -58.4
+   2 Hong Kong                      People's Republic of China      22.3  114.2
+   3 Johannesburg                   South Africa                   -26.2   28.1
+   4 London                         United Kingdom                  51.5   -0.1
+   5 Raleigh                        United States                   35.8  -78.7
+   6 Zurich                         Switzerland                     47.4    8.6
+
+cmd> quit

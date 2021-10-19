@@ -1,0 +1,105 @@
+cmd> add 25
+
+cmd> add 50
+
+cmd> add 75
+
+cmd> add 100
+
+cmd> tour
+  ID Name                           Country                            Dist
+  25 Zurich                         Switzerland                         0.0
+  50 Hobart                         Australia                       10428.4
+  75 Accra                          Ghana                           19613.7
+ 100 Harare                         Zimbabwe                        22288.4
+
+cmd> remove 50
+
+cmd> tour
+  ID Name                           Country                            Dist
+  25 Zurich                         Switzerland                         0.0
+  75 Accra                          Ghana                            2935.7
+ 100 Harare                         Zimbabwe                         5610.4
+
+cmd> add 200
+
+cmd> add 300
+
+cmd> add 400
+
+cmd> add 500
+
+cmd> tour
+  ID Name                           Country                            Dist
+  25 Zurich                         Switzerland                         0.0
+  75 Accra                          Ghana                            2935.7
+ 100 Harare                         Zimbabwe                         5610.4
+ 200 Fukuoka                        Japan                           13030.3
+ 300 Kandahar                       Afghanistan                     16734.3
+ 400 Imperatriz                     Brazil                          24515.3
+ 500 Mwanza                         Tanzania                        30056.4
+
+cmd> remove 500
+
+cmd> remove 25
+
+cmd> tour
+  ID Name                           Country                            Dist
+  75 Accra                          Ghana                               0.0
+ 100 Harare                         Zimbabwe                         2674.7
+ 200 Fukuoka                        Japan                           10094.6
+ 300 Kandahar                       Afghanistan                     13798.5
+ 400 Imperatriz                     Brazil                          21579.6
+
+cmd> add 1
+
+cmd> add 600
+
+cmd> add 700
+
+cmd> add 800
+
+cmd> add 900
+
+cmd> add 951
+
+cmd> tour
+  ID Name                           Country                            Dist
+  75 Accra                          Ghana                               0.0
+ 100 Harare                         Zimbabwe                         2674.7
+ 200 Fukuoka                        Japan                           10094.6
+ 300 Kandahar                       Afghanistan                     13798.5
+ 400 Imperatriz                     Brazil                          21579.6
+   1 Buenos Aires                   Argentina                       23705.4
+ 600 Magadan                        Russia                          33973.9
+ 700 Port Blair                     India                           38402.2
+ 800 Pattaya                        Thailand                        38957.0
+ 900 Washington                     United States                   47810.5
+ 951 Arbil                          Iraq                            53844.2
+
+cmd> remove 600
+
+cmd> remove 75
+
+cmd> remove 100
+
+cmd> remove 700
+
+cmd> remove 300
+
+cmd> remove 400
+
+cmd> remove 1
+
+cmd> remove 800
+
+cmd> remove 200
+
+cmd> remove 900
+
+cmd> remove 951
+
+cmd> tour
+  ID Name                           Country                            Dist
+
+cmd> quit

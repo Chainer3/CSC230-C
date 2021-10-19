@@ -1,0 +1,8 @@
+add 11
+add 7
+add 14
+add 2
+add 13
+tour
+nearest 10
+quit

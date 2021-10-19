@@ -1,0 +1,16 @@
+Manaus	Brazil	-3.100	-60.017
+Lviv	Ukraine	49.850	24.017
+Comodoro Rivadavia	Argentina	-45.867	-67.483
+Skopje	Macedonia	42.000	21.433
+Winnipeg	Canada	49.900	-97.133
+Newcastle	Australia	-32.917	151.750
+Bordeaux	France	44.833	-0.583
+Tegucigalpa	Honduras	14.100	-87.217
+Tagbilaran	Philippines	9.650	123.850
+Exeter	United Kingdom	50.717	-3.533
+Dallas	United States	32.783	-96.800
+Lake Chargoggagoggmanchauggagoggchaubunagungamaugg	United States	42.042	-71.842
+Quebec City	Canada	46.817	-71.217
+Narvik	Norway	68.417	17.567
+Guayaquil	Ecuador	-2.183	-79.883
+Torreon	Mexico	25.533	-103.450

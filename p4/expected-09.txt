@@ -1,0 +1,11 @@
+cmd> add 14
+
+cmd> nearest 5
+  ID Name                           Country                          Lat    Lon
+  11 Incheon                        South Korea                     37.5  126.6
+   2 Hong Kong                      People's Republic of China      22.3  114.2
+  13 Siem Reap                      Cambodia                        13.4  103.9
+  17 Kolkata (Calcutta)             India                           22.6   88.4
+   7 Bandung                        Indonesia                       -6.9  107.6
+
+cmd> quit
