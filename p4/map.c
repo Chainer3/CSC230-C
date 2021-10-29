@@ -103,8 +103,8 @@ void readLocations( char const *filename, Map *map )
   }
   
   Location *loc = ( Location *) malloc( sizeof(Location) );
-  char newName[MAX_LOC_LEN];
-  char newCountry[MAX_LOC_LEN];
+  char newName[MAX_NAME_LEN];
+  char newCountry[MAX_NAME_LEN];
   double newLat[5];
   double newLon[6];
     
@@ -117,8 +117,9 @@ void readLocations( char const *filename, Map *map )
     
     bool isDuplicate = false;
     for ( int i = 0; i < map->count; i++ ) {
-      if ( (strcmp(map->list[i]->name, newName) == 0 && strcmp( map->list[i]->country, newCountry) == 0)
-           && (map->list[i]->lat != newLat && map->list[i]->lon != newLon) ) {
+      if ( (strcmp(map->list[i]->name, newName) == 0 &&
+            strcmp( map->list[i]->country, newCountry) == 0) &&
+            (map->list[i]->lat != newLat && map->list[i]->lon != newLon) ) {
         fprintf( stderr, "Inconsistent location" );
         exit(1);
       } else if ((strcmp(map->list[i], newName) == 0 && 
@@ -158,17 +159,13 @@ void listLocations( Map *map, int (*compare)( void const *va, void const *vb ),
                     bool (*test)( Location const *loc ) )
 {
   qsort( map->list, map->count, sizeof(Location *), compare);
-  
-  for (int i = 0; i < map->count)
-    if (test(map->list[i])) {
-      printHeader();
-      printf( map->list[i] 
-      map->list
+  printf( "%4s %-30s %-30s %5.1lf %6.1lf\n", "ID", "Name", "Country", "Lat", "Lon");
+
+  for (int i = 0; i < map->count; i++ ) {
+    if ( test( map->list[ i ] ) ) {
+      printf( "%4s %-30s %-30s %5.1lf %6.1lf\n", map->list[ i ]->id, map->list[ i ]->name,
+            map->list[ i ]->country, map->list[ i ]->latitude, map->list[ i ]->longitude); 
+    }
   }
- 
-  compareName
-    return strcmp()
-  compareInt
-  compareDistance
 }
 
