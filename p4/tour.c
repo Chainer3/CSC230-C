@@ -14,9 +14,14 @@
 /** The last location in the tour */
 static Location *loca;
 /** The parameter of the command */
-static char par[ MAX_NAME_LEN ];
+static char *par;
 /** The last index of the tour list */
 static int tCount;
+/** The count of nearby locations */
+static int nearCount;
+/** The tour itinerary */
+static Map *tour;
+
 
 /* Print a usage message to standard error and exit unsuccessfully. 
 
@@ -47,14 +52,21 @@ static void invalidCommand()
   @param *vb the second location in the comparison.
   @return the integer value of the comparison.
 */
-int *compareLoc( void const *va, void const *vb )
+int compareLoc( void const *va, void const *vb )
 {
   Location *aLoc = *( ( Location ** ) va);
   Location *bLoc = *( ( Location ** ) vb);
 
   if ( strcmp( aLoc->name, bLoc->name ) == 0 ) {
-    return strcmp( aLoc->country, bLoc->country);
+    if ( strcmp( aLoc->country, bLoc->country ) < 0 ) {
+      return -1;
+    }
+    if ( strcmp( aLoc->country, bLoc->country ) > 0 ) {
+      return 1;
+    }
   }
+  return 0;
+}
 
 /*Compares two locations to the final tour location to find which location is nearest.
 
@@ -62,7 +74,7 @@ int *compareLoc( void const *va, void const *vb )
   @param *vb the second location in the map.
   @return the lowest of the two locations.
 */
-int *testNearest( void const *va, void const *vb )
+int compNearest( void const *va, void const *vb )
 {
   Location *aLoc = *( ( Location ** ) va);
   Location *bLoc = *( ( Location ** ) vb);
@@ -71,56 +83,19 @@ int *testNearest( void const *va, void const *vb )
   double b = distance( loca, bLoc );
 
   if ( a < b ) {
-    return -1;
-  }
-  if ( a > b ) {
     return 1;
   }
+  return -1;
+  
 }
 
 /*Simple helper function that will always return true.
 
   @param *loc is the location being tested.
 */
-bool testTrue( Locations const *loc )
+bool testTrue( Location const *loc )
 {
   return true;
-}
-
-/*
-
-*/
-bool testMatch( Locations const *loc )
-{
-  int ch;
-  char word[ MAX_NAME_LEN ];
-  char temp[ MAX_NAME_LEN ];
-  
-  for ( int i = 0; i < strlen(par); i++) {
-    ch = par[i];
-    word[ i ] = toLower( ch );
-    temp[ i ] = toLower( ch );
-  }
-  
-  if ( strcmp( word, temp ) == 0 ) {
-    return true;
-  }
-  return false;
-}
-
-/*
-
-*/
-bool testInTour( Map *map, void const *vb )
-{
-  Location *loc = *( ( Location ** ) vb);
-
-  for ( int i = 0; i < map->count; i++ ) {
-    if ( compareLoc( map->list[ i ], tour->list[ j ] ) == 0) {
-      return true;
-    }
-  }
-  return false;
 }
 
 /* Return the lower-case version of the given code.  There's a standard
@@ -136,30 +111,50 @@ int toLower( int ch )
   return ch;
 }
 
-/*The getCommand() function is another helper function that handles determining which
-  command was received by the user. By using "strcmp", if a match is found, the
-  corresponding char is returned.
-   
-  @param *command is the command received in the terminal.
-  @return the corresponding letter to the matched command. If no match is found, 'z' is
-           returned.
+/* Boolean function that checks the location for a specific word parameter received
+   in the list command.
+
+   @param *loc is the location be
+   @return true if the location name/country 
 */
-static char getCommand( char *command ) {
-  if (strcmp("list\0", command) == 0 ) {
-    return 'a';
-  } else if (strcmp("nearest", command) == 0 ) {
-    return 'b';
-  } else if (strcmp("add", command) == 0) {
-    return 'c';
-  } else if (strcmp("remove", command) == 0) {
-    return 'd';
-  } else if (strcmp("tour\n", command) == 0) {
-    return 'e';
-  } else if (strcmp("quit\n", command) == 0) {
-    return 'f';
-  } else {
-    return 'z';
+bool testMatch( Location const *loc )
+{
+  int ch1, ch2, ch3;
+
+  for ( int i = 0; i < strlen(par); i++) {
+    ch1 = par[i];
+    ch2 = loc->name[ i ];
+    ch3 = loc->country[ i ];
+    
+    if ( toLower( ch1 ) != toLower( ch2 ) ) {
+      if ( toLower( ch1 ) != toLower( ch3 ) ) {
+        return false;
+      } else {
+        continue;
+      }
+    }
   }
+  return true;
+}
+
+/* Tests to determine which location is the closes to the last location in the tour.
+    
+   @param *loc is the location being compared to the final location in the tour.
+   @return true if it is not in the tour already. Otherwise, returns false.
+*/
+bool testInTour(  Location const *loc )
+{
+
+  for ( int i = 0; i < tour->count; i++ ) {
+    if ( loc->id == tour->list[ i ]->id ) {
+      return false;
+    }
+    
+    if ( strlen( par ) > nearCount )
+      nearCount++;
+      return true;
+  }
+  return false;
 }
 
 /* This is the starting point of the program. Various functions of the program will be utilized based
@@ -182,12 +177,12 @@ int main( int argc, char *argv[] )
   char **allFiles = ( char **) malloc( numFiles * sizeof( char * ) );
   for ( int i = 1; i < argc; i++ ) {
     int n = strlen( argv[ i ] );
-    allFiles[ i - 1 ] = ( char * ) malloc( size * sizeof( char ) + 1 );
+    allFiles[ i - 1 ] = ( char * ) malloc( n * sizeof( char ) + 1 );
     strcpy( allFiles[ i - 1 ], argv[i] );
   }
 
   Map *map = makeMap();
-  Map *tour = makeMap();
+  tour = makeMap();
   
   for ( int i = 1; i < argc; i++ ) {
     readLocations( argv[ i ], map );
@@ -207,176 +202,129 @@ int main( int argc, char *argv[] )
   
   do {
     cmd = readLine( stdin );
-    if (strlen( cmd ) > MAX_CMD + MAX_NAME_LEN + 1) {
+    if (strlen( cmd ) > MAX_CMD_LEN + MAX_NAME_LEN + 1) {
       invalidCommand();
-      printf( "cmd> " );
+      printf("\ncmd> ");
     }
     char delimiter[] = " \n"; 
-    char *cmd2 = strtok( cmd, delimiter );
-    
-    int cmds[ 2 ] = {getCommand( cmd ), getCommand( cmd2 )};
     int newID = 0;
-   
-    switch ( cmds[ i ] ) {
-      // list
-      case 'a':                        
-        cmd2 = strtok( NULL, delimiter );
-        int len = strlen(cmd2);
+
+    // list
+    if (strcmp("list\0", cmd) == 0 ) {                      
+      par = strtok( NULL, delimiter );
+      int len = strlen(par);
         
-        if ( cmd2 == NULL ) {
-          printf( "add %s\n", cmd );
-          listLocations( map, compareID, test );
-          break;
-        }
-        if ( len < 30 ) {
-          printf( "%s %s", cmd, cmd2 );
-          printf( "%4s %-30s %-30s %5.1lf %6.1lf\n", "ID", "Name", "Country", "Lat", "Lon");
-          for ( int i = 0; i < map->count; i++ ) {
-            int *newCountry;
-            for ( int i = 0; i < len; i++ ) {
-              newCountry[ i ] = toLower( map->list[ i ]->country );
-            }  
-            if ( newCountry != NULL ) {
-              memcpy( tour->list[ i ], map->list[ i ], sizeof( Location ) );
-            }
-          }
-          
-          for ( int j = 0; j < map->count; j++ ) {
-            char *newLoc = toLower( map->list[ j ]->name );
-            if ( newLoc != NULL ) {
-              memcpy( tour->list[ j ], map->list[ j ], sizeof( Location ) );
-            }
-          }
-          for ( int k = 0; k < map->count; k++ ) {
-            Location *temp = map->list[ k ];
-            listLocations( *map, *compareName( cmd, void const *vb ), *testListPlus( *temp ) );
-          }
+      if ( par == NULL ) {
+        listLocations( map, compareLoc, testTrue );
+        continue;
+      } else {
+        if ( len > ( MAX_NAME_LEN + MAX_CMD_LEN + 1 ) ) {
+          invalidCommand();
+          printf("\ncmd> ");
         } else {
-          invalidCommand();
+          listLocations( map, compareLoc, testMatch );
+          continue;
         }
-        break;
-      
-      // nearest
-      case 'b':                        
-        cmd2 = strtok( Null, delimiter );
-        testInTour( map-list, tour-list[ i ] );
-        for ( int i = 0; i < cmd2; i++ ) {
-          testInTour( map->list, tour->list[ i ] );
-        }
-        if ( id < 0 || tCount == 0 || cmd2 == NULL || (sscanf( cmd2, "%d", &id) != 1 )) {
-          invalidCommand();
-          break;
-        }
-        
-        // Create a temp tour
-        Map *temp = makeMap();
-        temp->capacity = map->capacity;
-        temp->count = map->count;
-        temp->list = ( Location *) realloc( map->list, sizeof( Location *) * temp->capacity );
+      }
+    } else if ( strcmp( "nearest", cmd ) == 0 ) {                    
+      par = strtok( NULL, delimiter );
 
-        loca = tour-list[ tCount ];
+      if ( newID < 0 || tCount == 0 || par == NULL || 
+          (sscanf( par, "%d", &newID) != 1 )) {
+        invalidCommand();
+        printf("\ncmd> ");
+        continue;
+      }
         
-        
-        for ( int i = 0; i < tCount, i++ ) {
-          if ( !isInTour( map, tour->list[ i ] ) ) {
-            memcpy( temp->list[ temp->count++ ], map->list[ i ], sizeof( Location ) );
-          }
-          if ( ( temp->count == ( cmd2 - 1 ) ||  
-                (cmd2 > map->count && i == map->count ) {
-            break;
-          }
-        }
-        
-        int dist1[cmd2];
-        int dist2[cmd2];
-        int d = 0;
-//         int len = sizeof( dist ) / sizeof( int )[]
-        for ( int i = 0; i < temp->count; i++ ) {
-          d = distance( temp->list[ i ], tour->list[ tCount ] );
-          dist1[ i ] = d;
-          dist2[ i ] = d;
-        }
-        qsort( dist1, cmd2, sizeof( int ), compareID );
- 
-        listLocations( temp, compareDistance(tour->list[ tCount ], ), test );
-        break;
-      
-      // add
-      case 'c':                        
-        cmd2 = strtok( Null, delimiter );
-        if ( sscanf( cmd2, "%d", &newID ) != 1 || cmd2 == NULL || 
-             !( id > 0 && id < map->count + 1 ) ) {
-          invalidCommand();
-          break;
-        }  
-        for ( int i = 0; i < map->count; i++ ) {
-          if ( tCount >= tour->capacity) {
-            tour->capacity *= 2;
-            tour = ( Location **) realloc( tour, sizeof( Location *) * tour->capacity );
-          }
-          if ( tour->list[ i ]->id == newID ) {
-            memcpy( tour->list[ tCount++ ], map->list[ i ], sizeof( Location ) );
-            break;
-          } 
+      // Create a temp tour
+      Map *temp = makeMap();
+      temp->capacity = map->capacity;
+      temp->count = map->count;
+      temp->list = ( Location **) realloc( map->list, sizeof( Location *) * temp->capacity );
 
-        }
-        printf( "add %s\n", cmd );
-        break;    
+      loca = tour->list[ tCount ];
         
-      // remove
-      case 'd':
-        cmd2 = strtok( Null, delimiter );
-        if ( sscanf( cmd2, "%d", &newID ) != 1 || cmd2 == NULL ) {
-          invalidCommand();
-          break;
+      for ( int i = 0; i < tCount; i++ ) {
+        if ( !testInTour( map->list[ i ] ) ) {
+          memcpy( temp->list[ temp->count++ ], map->list[ i ], sizeof( Location ) );
         }
-        
-        bool isValCmd = false;
-        for ( int i = 0; i < tCount; i++ ) {
-          if ( tour->list[ i ]->id == newID ) {
-            isValCmd = true;
-            memcpy( tour->list[ i ], tour->list[ i + 1 ], sizeof( Location ) );
-            tour->list[ tCount - 1 ] = NULL;
-            tCount--;
-            break;
-          }
+        if ( temp->count == ( strlen(par) - 1 ) ||
+           ( strlen(par) > map->count && i == map->count )) {
+          continue;
         }
-        if ( !isValCmd ) {
-          invalidCommand();
+      }
+
+      listLocations( temp, compNearest, testInTour );
+      continue;
+    } else if ( strcmp( "add", cmd ) == 0) {                    
+      par = strtok( NULL, delimiter );
+      if ( sscanf( par, "%d", &newID ) != 1 || par == NULL || 
+        !( newID > 0 && newID < map->count + 1 ) ) {
+        invalidCommand();
+        printf("\ncmd> ");
+        continue;
+      }  
+      for ( int i = 0; i < map->count; i++ ) {
+        if ( tCount >= tour->capacity) {
+          tour->capacity *= 2;
+          tour->list = ( Location **) realloc( tour->list, sizeof(Location *) * tour->capacity );
+        }
+        if ( tour->list[ i ]->id == newID ) {
+          memcpy( tour->list[ tCount++ ], map->list[ i ], sizeof( Location ) );
           break;
         } 
-        break;
-      
-      // tour
-      case 'e':
-        cmd2 = strtok( Null, delimiter );
-        if ( cmd2 != NULL ) {
-          invalidCommand();
-        }
-        
-        printf( "%s\n", cmd );
-        printf( "%4s %-30s %-30s %8s\n", "ID", "Name", "Country", "Lat", "Lon");
-        
-        double totDist = 0;
-        for ( int = 0; i < tCount; i++ ) {
-          printf( "%4d %-30s %-30s %8.1f\n", tour[i]->id, tour[i]->name, 
-                  tour[i]->country, totDist );
-          totDist += distance( tour->list[ i ], tour->list[ i + 1 ] );
-        }
-        break;
-      
-      // quit
-      case 'f':
-        freeMap( map );
-        freeMap( tour );
-        free( cmd );
-        return EXIT_SUCCESS;   
-      
-      // Base case
-      default:
+
+      }
+      printf( "add %s\n", cmd );
+    } else if ( strcmp( "remove", cmd ) == 0) {
+      par = strtok( NULL, delimiter );
+      if ( sscanf( par, "%d", &newID ) != 1 || par == NULL ) {
         invalidCommand();
-        break;     
+        continue;
+      }  
+      bool isValCmd = false;
+      for ( int i = 0; i < tCount; i++ ) {
+        if ( tour->list[ i ]->id == newID ) {
+          isValCmd = true;
+          memcpy( tour->list[ i ], tour->list[ i + 1 ], sizeof( Location ) );
+          tour->list[ tCount - 1 ] = NULL;
+          tCount--;
+          continue;
+        }
+      }
+      if ( !isValCmd ) {
+        invalidCommand();
+        printf("\ncmd> ");
+        continue;
+      }   
+    } else if (strcmp("tour\0", cmd) == 0 ) {
+      par = strtok( NULL, delimiter );
+      if ( par != NULL ) {
+        invalidCommand();
+        continue;
+      }
+  
+      printf( "%s\n", cmd );
+      printf( "%4s %-30s %-30s %8s\n", "ID", "Name", "Country", "Dist");
+  
+      double totDist = 0;
+      for ( int i = 1; i < tCount; i++ ) {
+        printf( "%4d %-30s %-30s %8.1f\n", tour->list[i]->id, tour->list[i]->name, 
+                tour->list[i]->country, totDist );
+        totDist += distance( tour->list[ i - 1 ], tour->list[ i ] );
+      }
+      printf("\n");
+    } else if (strcmp("quit\n", cmd) == 0) {
+      freeMap( map );
+      freeMap( tour );
+      free( cmd );
+      return EXIT_SUCCESS;   
+    } else {
+      invalidCommand();
+      printf("\ncmd> ");
+      continue;
     }
+      
   } while ( cmd != NULL );
   
   freeMap( map );
