@@ -208,4 +208,3 @@ void listLocations( Map *map, int (*compare)( void const *va, void const *vb ),
   printf( "\n" );
   
 }
-

@@ -329,6 +329,3 @@ int main( int argc, char *argv[] )
   
   return EXIT_SUCCESS;
 }
-
-// int n = sizeof(list)/sizeof(Location*);
-// qsort( list, n, sizeof( Location * ), strcmp());
