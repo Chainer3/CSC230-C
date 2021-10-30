@@ -106,13 +106,12 @@ void readLocations( char const *filename, Map *map )
     fprintf( stderr, "Can't open file: %s\n", filename );
     exit( EXIT_FAILURE ); 
   }
-  //printf("1");
+
   char *line;
   Location *loc;
   line = readLine( fp );
 
   while ( line != NULL ) { 
-  //printf("2");
 
     loc = ( Location * ) malloc( sizeof( Location ) );
     
@@ -132,25 +131,25 @@ void readLocations( char const *filename, Map *map )
       fprintf( stderr, "Invalid location file: %s\n", filename );
       exit( EXIT_FAILURE );
     }
-    //printf("3");
+
     // Search for duplicate Location
        bool isDuplicate = false;
-//     for ( int i = 0; i < map->count; i++ ) {
-//       if ( strncmp( map->list[i]->name, loc->name, MAX_NAME_LEN ) == 0 &&
-//            strncmp( map->list[i]->country, loc->country, MAX_NAME_LEN ) == 0 ) {
-//         if ( ( map->list[i]->latitude == loc->latitude ) && 
-//              ( map->list[i]->longitude == loc->longitude ) ) {
-//           free( loc );
-//           free( line );
-//           fclose( fp );
-//           fprintf( stderr, "Inconsistent location\n" );
-//           exit( EXIT_FAILURE );
-//         } else {
-//           isDuplicate = true;
-//           break;
-//         }
-//       }
-//     }
+    for ( int i = 0; i < map->count; i++ ) {
+      if ( strncmp( map->list[i]->name, loc->name, MAX_NAME_LEN ) == 0 &&
+           strncmp( map->list[i]->country, loc->country, MAX_NAME_LEN ) == 0 ) {
+        if ( ( map->list[i]->latitude == loc->latitude ) && 
+             ( map->list[i]->longitude == loc->longitude ) ) {
+          free( loc );
+          free( line );
+          fclose( fp );
+          fprintf( stderr, "Inconsistent location\n" );
+          exit( EXIT_FAILURE );
+        } else {
+          isDuplicate = true;
+          break;
+        }
+      }
+    }
     
     // Check for valid coordinates
     if ( loc->latitude > MAX_LAT || loc->longitude > MAX_LON ||
