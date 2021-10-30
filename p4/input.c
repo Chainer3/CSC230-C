@@ -16,15 +16,16 @@
 */
 char *readLine( FILE *fp )
 {
-  // Grab first char in case of empty file
-  char ch = fgetc( fp );
-  if ( ch == EOF ) {
-    return NULL;
-  } 
-
   // Allocate a string with a small, initial capacity.
   int capacity = 5;
   char *input = ( char * ) malloc( capacity * sizeof( char ) + 1) ;
+  
+  // Grab first char in case of empty file
+  char ch = fgetc( fp );
+  if ( ch == EOF ) {
+    free( input );
+    return NULL;
+  }
 
   // Number of characters we're currently using.
   int len = 0;
@@ -32,14 +33,16 @@ char *readLine( FILE *fp )
   while ( ch != '\n') {
     if ( len >= capacity ) {
       capacity *= 2;
-      char *temp = ( char * ) malloc( capacity * sizeof( char ) + 1 );
-      memcpy( temp, input, len * sizeof( char ) );
+      char *temp = ( char *) malloc( capacity * sizeof( char ) + 1 );
+      temp = input;
       free( input );
       input = temp;
     }
 
     input[ len++ ] = ch;
+    ch = fgetc( fp );
   }
+
   input[ len ] = '\0';
   return input;
 }

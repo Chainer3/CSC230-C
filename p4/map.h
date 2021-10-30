@@ -5,7 +5,7 @@
 #include <math.h>
 
 /** Max length of a location name */
-# define MAX_NAME_LEN 30
+# define MAX_NAME_LEN 32
 /** Max output length */
 # define OUTPUT_LEN 79
 /** Initial map capacity */
@@ -14,6 +14,14 @@
 # define MAX_CMD_LEN 7
 /** Resize the capacity of the map */
 # define CAP_RESIZE 2
+/** Multiplier for converting degrees to radians */
+#define DEG_TO_RAD ( M_PI / 180 )
+/** Radius of the earth in miles. */
+#define EARTH_RADIUS 3959.0
+/** Maximum range of latitude */
+#define MAX_LAT 90
+/** Maximum range of longitude */
+#define MAX_LON 180
 
 typedef struct
 {
@@ -26,7 +34,8 @@ typedef struct
 typedef struct
 {
     Location **list;
-    int count, capacity;
+    int count;
+    int capacity;
 } Map;
 
 /* Calculates the distance between two locations and returns it as a double value.

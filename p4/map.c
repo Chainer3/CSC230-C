@@ -9,11 +9,6 @@
 #include "map.h"
 #include "input.h"
 
-/** Multiplier for converting degrees to radians */
-#define DEG_TO_RAD ( M_PI / 180 )
-/** Radius of the earth in miles. */
-#define EARTH_RADIUS 3959.0
-
 
 /* Calculates the distance between two locations and returns it as a double value.
 
@@ -77,6 +72,7 @@ Map *makeMap() {
   currentMap->list = locList;
   currentMap->capacity = INIT_CAPACITY;
   currentMap->count = 0;
+  
   return currentMap;
 }
 
@@ -90,8 +86,9 @@ void freeMap( Map *map )
   for ( int i = 0; i < map->capacity; i++ ) {
     free( map->list[ i ] );
   }
+  free( map->list );
   free( map );
-  map = NULL;
+
 }
 
 /* The readLocations() function receives a file pointer and map as it's parameters. It's
@@ -107,57 +104,84 @@ void readLocations( char const *filename, Map *map )
   FILE *fp = fopen( filename, "r" );
   if ( !fp ) {
     fprintf( stderr, "Can't open file: %s\n", filename );
-    exit( 1 ); 
+    exit( EXIT_FAILURE ); 
   }
-  
+  //printf("1");
   char *line;
-  Location *loc = ( Location *) malloc( sizeof(Location) );
-    
+  Location *loc;
   line = readLine( fp );
-  while ( line ) { 
-    if ( sscanf( line, "%[^\t] %[^\t] %lf%lf", loc->name, loc->country, &loc->latitude, 
+
+  while ( line != NULL ) { 
+  //printf("2");
+
+    loc = ( Location * ) malloc( sizeof( Location ) );
+    
+    if ( sscanf( line, "%[^\t] %[^\t]%lf%lf", loc->name, loc->country, &loc->latitude, 
          &loc->longitude) != 4 ) {
+      free( line );
+      free( loc );
+      fclose( fp );
+      fprintf( stderr, "Invalid location file: %s\n", filename );
+      exit( EXIT_FAILURE );
+    } 
+
+    if ( strlen( loc->country ) > MAX_NAME_LEN || strlen( loc->name ) > MAX_NAME_LEN ) {
+      free( line );
+      free( loc );
+      fclose( fp );
+      fprintf( stderr, "Invalid location file: %s\n", filename );
+      exit( EXIT_FAILURE );
+    }
+    //printf("3");
+    // Search for duplicate Location
+       bool isDuplicate = false;
+//     for ( int i = 0; i < map->count; i++ ) {
+//       if ( strncmp( map->list[i]->name, loc->name, MAX_NAME_LEN ) == 0 &&
+//            strncmp( map->list[i]->country, loc->country, MAX_NAME_LEN ) == 0 ) {
+//         if ( ( map->list[i]->latitude == loc->latitude ) && 
+//              ( map->list[i]->longitude == loc->longitude ) ) {
+//           free( loc );
+//           free( line );
+//           fclose( fp );
+//           fprintf( stderr, "Inconsistent location\n" );
+//           exit( EXIT_FAILURE );
+//         } else {
+//           isDuplicate = true;
+//           break;
+//         }
+//       }
+//     }
+    
+    // Check for valid coordinates
+    if ( loc->latitude > MAX_LAT || loc->longitude > MAX_LON ||
+         loc->latitude < -MAX_LAT || loc->longitude < -MAX_LON) {
       free( loc );
       free( line );
+      fclose( fp );
       fprintf( stderr, "Invalid location file: %s\n", filename );
-      exit( 1 );
-    }
-    
-    bool isDuplicate = false;
-    for ( int i = 0; i < map->count; i++ ) {
-      if ( ( strcmp( map->list[i]->name, loc->name ) == 0 ) &&
-            ( strcmp( map->list[i]->country, loc->country ) == 0 ) ) {
-        if ( ( map->list[i]->latitude != loc->latitude ) && 
-             ( map->list[i]->longitude != loc->longitude ) ) {
-          free( loc );
-          free( line );
-          fclose( fp );
-          fprintf( stderr, "%s\n", "Inconsistent location" );
-          exit( 1 );
-        } else {
-          isDuplicate = true;
-          break;
-        }
-      }
+      exit( EXIT_FAILURE );
     }
     
     // Start over if the location is a duplicate
     if ( isDuplicate ) {
       free( loc );
-      free( line );
       continue;
-    }
-    
-    if ( map->count >= map->capacity ) {
+    } else {
+      if ( map->count >= map->capacity ) {
       map->capacity *= CAP_RESIZE;
       map->list = ( Location **) realloc( map->list, sizeof( Location *) * map->capacity );
+      }
+
+      loc->id = map->count + 1;
+      map->list[ map->count ] = loc;
+      map->count++;
     }
     
-    loc->id = map->count + 1;
-    map->list[ map->count++ ] = loc;
+    free( line );
+    line = readLine( fp );
   }
+  
   free( line );
-  free( loc );
   fclose( fp );
 }
 
@@ -178,7 +202,8 @@ void listLocations( Map *map, int (*compare)( void const *va, void const *vb ),
   for ( int i = 0; i < map->count; i++ ) {
     if ( test( map->list[ i ] ) ) {
       printf( "%4d %-30s %-30s %5.1f %6.1f\n", map->list[ i ]->id, map->list[ i ]->name,
-            map->list[ i ]->country, map->list[ i ]->latitude, map->list[ i ]->longitude); 
+              map->list[ i ]->country, map->list[ i ]->latitude,
+              map->list[ i ]->longitude); 
     }
   }
   printf( "\n" );
