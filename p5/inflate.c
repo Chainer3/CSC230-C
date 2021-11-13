@@ -106,7 +106,7 @@ int main( int argc, char *argv[] )
   Dictionary *d;
 
   if ( argc < MIN_ARGS || argc > MAX_ARGS ) {
-    USAGE_ERROR( "inflate " );
+    USAGE_ERROR( "inflate" );
   }
 
   int inFile = argc - FILE_ARGS;
@@ -119,13 +119,13 @@ int main( int argc, char *argv[] )
         i++;
         continue;
       } else {
-        USAGE_ERROR( "inflate " );
+        USAGE_ERROR( "inflate" );
       }   
     } else if ( strcmp( "-d", argv[ i ] ) == 0 ) {
       printDict = true;
       continue;
     } else {
-        USAGE_ERROR( "inflate " );
+        USAGE_ERROR( "inflate" );
     }
   }
 
