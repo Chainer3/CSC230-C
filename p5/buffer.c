@@ -19,7 +19,7 @@ Buffer *makeBuffer()
 {
     Buffer *newBuffer = malloc( sizeof( Buffer ) );
     newBuffer->data = ( char * ) malloc( sizeof( char ) * BBITS);
-    newBuffer->cap = BBITS;
+    newBuffer->cap = INIT_CAP;
     newBuffer->len = 0;
 
     return newBuffer;

@@ -1,14 +1,3 @@
-/**
-   @file buffer.c
-   @author Stephen Gonsalves (dkgonsal)
-
-   The buffer file creates a Buffer structure with a data field, capacity field
-   and a length field. Functions within the file allow input files to be read and
-   stored in the buffer's data field, as well as written from its data field into 
-   a binary file. The buffer can also be cleared and memory freed from within this
-   file.
-*/
-
 #ifndef _BUFFER_H_
 #define _BUFFER_H_
 
@@ -26,16 +15,15 @@
 
 /** Macro for file read error */
 #define STREAM_ERROR( filename ) { perror( filename ); exit( 1 ); }
-/** Check for capacity of buffer */
+/**  */
 #define CHECK_CAP( char, buffer, INC_CAP ) { if ( buffer->len >= buffer->cap ) { buffer->cap *= INC_CAP; buffer->data = ( char* ) realloc( buffer->data, buffer->cap ); } }
-/** Find the byte index */
+/**  */
 #define FIND_BYTE( idx, BBITS ) idx / BBITS;
-/** Find the bit index in the byte */
+/**  */
 #define FIND_BIT( idx, BBITS ) BBITS - 1 - idx % BBITS;
-/** Usage error sequence */
+/**  */
 #define USAGE_ERROR( x ) { fprintf( stderr, "usage: %s [-d] [-b bits] infile outfile\n", x ); exit( 1 ); }
-/** Inflate error for invalid compressed file */
-#define INFLATE_ERROR( nextWord, d ) { if ( nextWord > d->dictLength ) { fprintf( stderr, "Undefined code: %d\n", nextWord ); exit( 1 ); } }
+
 
 /** Representation of a resizable array of bytes, with functions to
     make it easy to access individual bits. */

@@ -42,7 +42,7 @@ void freeDictionary( Dictionary *d )
 
 void printWord( char *word, int len )
 {
-  for ( int i = 0; i < len; i++ )
+  FOR( i, len )
     if ( word[ i ] > ' ' && word[ i ] <= '~' ) {
       printf( " %c", word[ i ] );
     } else {

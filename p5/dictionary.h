@@ -1,3 +1,12 @@
+/**
+    @file dictionary.c
+    @author Stephen Gonsalves (dkgonsal)
+    
+    The dictionary file creates a dictionary struct and handles all of the functions
+    associated with the dictionary. The dictionary file only depends on its own header
+    file.
+*/
+
 #include <math.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -76,4 +85,5 @@ int lookupWord( Dictionary *d, char *word, int len );
    @param len is the first available index at the end of the dictionary.
 */
 void addWord( Dictionary *d, char *word, int len );
+
 #endif

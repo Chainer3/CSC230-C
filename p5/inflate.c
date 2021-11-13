@@ -38,10 +38,10 @@ Buffer *inflate( Dictionary *d, Buffer *inBuffer, int bits )
       break;
     }
     
-    unsigned int secondLoc = 0, dictIndex = 0 , nextWord = 0;
+    unsigned int dictIndex = 0, secondLoc = 0, nextWord = 0;
 
     for ( int j = 0; j < bits; j++ ) {
-      if ( getBit( inBuffer, loc ) == 1 ) {
+      if ( getBit( inBuffer, loc ) ) {
         dictIndex = dictIndex | ( 0x01 << ( bits - 1 - j ) );
       }
       loc++;
@@ -49,8 +49,8 @@ Buffer *inflate( Dictionary *d, Buffer *inBuffer, int bits )
 
     char *currentWord = d->wordList[ dictIndex ];
     
-    for ( int j = 0; j < d->wordLen[ dictIndex ]; j++ ) {
-      appendByte( outBuffer, currentWord[ j ] );
+    for ( int k = 0; k < d->wordLen[ dictIndex ]; k++ ) {
+      appendByte( outBuffer, currentWord[ k ] );
     }
 
     if ( i < inBuffer->len - 1 ) {
@@ -62,16 +62,14 @@ Buffer *inflate( Dictionary *d, Buffer *inBuffer, int bits )
       
 
       for ( int k = 0; k < bits; k++ ) {   
-        if ( getBit( inBuffer, secondLoc ) == 1 ) {
+        if ( getBit( inBuffer, secondLoc ) ) {
           nextWord = nextWord | ( 0x01 << ( bits - 1 - k ));
-          secondLoc++;
         }
+        secondLoc++;
       }
-        
-      if ( nextWord > d->dictLength ) {
-        fprintf( stderr, "Undefined code: %d\n", nextWord );
-        exit( 1 );
-      }
+      
+      // Check for invalid compression in file
+      INFLATE_ERROR( nextWord, d );
 
       char *newWord = d->wordList[ nextWord ];
       int len = d->wordLen[ dictIndex ];
@@ -88,7 +86,6 @@ Buffer *inflate( Dictionary *d, Buffer *inBuffer, int bits )
 }
 
 
-
 /* This is the starting point of the deflate program. Using the linked buffer/dictionary
    headers, deflate will read from a valid input file and create a buffer to write
    compressed versions of each new word to a dictionary and ultimately to a valid output
@@ -98,9 +95,7 @@ Buffer *inflate( Dictionary *d, Buffer *inBuffer, int bits )
    @param argv is an array of args received in the terminal.
 */
 int main( int argc, char *argv[] )
-{
- printf( "argc is %d\n", argc);
- 
+{ 
   bool printDict = false;
   int bitArg = DEFAULT_BITS;
   Dictionary *d;
