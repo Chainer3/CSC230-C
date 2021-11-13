@@ -1,0 +1,11 @@
+ 256  a b
+ 257  b a
+ 258  a c
+ 259  c a
+ 260  a b c
+ 261  c a c
+ 262  c b
+ 263  b a b
+ 264  b c
+ 265  c a c b
+ 266  b0A
