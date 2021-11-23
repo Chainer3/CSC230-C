@@ -199,8 +199,6 @@ Node *makeRealNode( char const *init )
  */
 Node *makeStringNode( char const *init )
 {  
-
-//   printf( "making string node\n" );
   int strLength = strlen( init );
   if ( init[ 0 ] != '"' || init[ strLength - 1 ] != '"' ) {
     return NULL;
@@ -213,6 +211,10 @@ Node *makeStringNode( char const *init )
   for ( int i = 1; i < strLength - 1; i++ ) {
     elem[ i - 1 ] = init[ i ];
   }
+  elem[ strLength - 2 ] = '\0';
+  
+//   printf( "ELEM: %s\n", elem );
+
    elem[ strLength ] = '\0';
 
     Node *n = ( Node * ) malloc( sizeof( Node ) );
@@ -224,6 +226,6 @@ Node *makeStringNode( char const *init )
     n->next = NULL;
     n->val = val;
 //   printf( "making string node3\n" );
-    
+
     return n;
 }

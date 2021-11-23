@@ -72,13 +72,26 @@ int main()
     else if ( strcmp( "enqueue\0", command ) == 0 ) {
     
 	  int length = strlen( cmd );
-
+      
 	  int i = 1;
       for ( ; i < length - 1; i++) {
       	element[i - 1] = cmd[pos + i];
       }
         
        element[ i ] = '\0';
+ 	
+ 	while ( *element == ' ')
+ 		element++;
+ 		
+ 	for ( int i = strlen(element) - 1; i > 0; i--) {
+ 		if ( element[i] != ' ')
+ 			break;	
+ 	    element[i] = '\0';
+ 	}
+ 	
+//  	printf( "%d", (int) strlen(element));
+//  	printf( "ELEMENT: %s\n\n", element );
+
 
       bool built = false;
       Node *n = NULL;
@@ -114,19 +127,28 @@ int main()
 
     // PROMOTE
     else if ( strcmp( "promote\0", command ) == 0 ) {
-      int length = strlen( cmd );
-
+	  int length = strlen( cmd );
+      
 	  int i = 1;
       for ( ; i < length - 1; i++) {
       	element[i - 1] = cmd[pos + i];
       }
         
        element[ i ] = '\0';
+ 	
+ 	while ( *element == ' ')
+ 		element++;
+ 		
+ 	for ( int i = strlen(element) - 1; i > 0; i--) {
+ 		if ( element[i] != ' ')
+ 			break;	
+ 	    element[i] = '\0';
+ 	}
+ 	
+//  	printf( "ELEMENT:%s\n", element );
        
       if ( qCount == 0 ) {
         printf( "Invalid command\n\n" );
-//         free( command );
-//         free( element );
         continue;
       }
       
