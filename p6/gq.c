@@ -95,7 +95,7 @@ int main()
 
       bool built = false;
       Node *n = NULL;
-      for ( int i = 0; i < 3; i++ ) {
+      for ( int i = 0; i < arrLen; i++ ) {
         n = nodeConstructors[ i ]( element );
         if ( n != NULL ) {
           enqueue( q, n );
@@ -127,31 +127,29 @@ int main()
 
     // PROMOTE
     else if ( strcmp( "promote\0", command ) == 0 ) {
-	  int length = strlen( cmd );
-      
-	  int i = 1;
-      for ( ; i < length - 1; i++) {
-      	element[i - 1] = cmd[pos + i];
-      }
-        
-       element[ i ] = '\0';
- 	
- 	while ( *element == ' ')
- 		element++;
- 		
- 	for ( int i = strlen(element) - 1; i > 0; i--) {
- 		if ( element[i] != ' ')
- 			break;	
- 	    element[i] = '\0';
- 	}
- 	
-//  	printf( "ELEMENT:%s\n", element );
-       
       if ( qCount == 0 ) {
         printf( "Invalid command\n\n" );
         continue;
       }
       
+	  int length = strlen( cmd );
+	  int i = 1;
+      for ( ; i < length - 1; i++) {
+      	element[i - 1] = cmd[pos + i];
+      }  
+      element[ i ] = '\0';
+
+ 	  while ( *element == ' ') {
+ 		element++;
+ 	  }
+ 		
+ 	  for ( int i = strlen(element) - 1; i > 0; i--) {
+ 	    if ( element[i] != ' ') {
+          break;
+        }
+ 	    element[i] = '\0';
+ 	  }
+    
       bool promoted = false;
       Node *n = NULL;
       for ( int i = 0; i < arrLen; i++ ) {
@@ -159,8 +157,8 @@ int main()
         if ( n != NULL ) {
           promoted = promote( q, n );
           if ( promoted ) {
+            break;
           }
-          break;
         }
       }
       
@@ -168,6 +166,7 @@ int main()
         printf( "Invalid command\n\n" );
         continue;
       }
+      
       printf( "\n" );
       n->destroy( n );
     }

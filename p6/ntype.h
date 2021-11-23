@@ -17,6 +17,8 @@
 
 /** Initial capacity of the return string */
 #define CAP 10
+/** Used to remove the end quotation in makeStringNode */
+#define RM_END_QUOTE 2
 
 /** Make a node containing an integer value.
     @param val Integer value to store in this node.

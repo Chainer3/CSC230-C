@@ -47,7 +47,8 @@ static void printStr( struct NodeStruct const *n )
   printf( "%s\n", ptr );
 }
 
-/*  Determines if two nodes are equivalent by comparing where their
+/*  
+ *  Determines if two nodes are equivalent by comparing where their
  *  print fields point to.
  * 
  *  @param a is the first node used for comparison.
@@ -72,7 +73,8 @@ static bool equalsInt( struct NodeStruct const *a,struct NodeStruct const *b )
   return false;
 }
 
-/*  Determines if two nodes are equivalent by comparing where their
+/*  
+ *  Determines if two nodes are equivalent by comparing where their
  *  print fields point to.
  * 
  *  @param a is the first node used for comparison.
@@ -96,7 +98,8 @@ static bool equalsReal( struct NodeStruct const *a, struct NodeStruct const *b )
   return false;
 }
 
-/*  Determines if two StringNodes are equivalent by comparing their
+/*  
+ *  Determines if two StringNodes are equivalent by comparing their
  *  strings and where their print fields point to.
  * 
  *  @param a is the first node used for comparison.
@@ -118,7 +121,8 @@ static bool equalsString( struct NodeStruct const *a, struct NodeStruct const *b
   return false;
 }
 
-/*  Frees the memory allocated to a Node.
+/*  
+ *  Frees the memory allocated to a Node.
  * 
  *  @param n is the IntNode whose memory is being freed.
  */
@@ -128,7 +132,8 @@ static void destroy( Node *n )
   free( n );
 }
 
-/*  Constructs an integer node with the given string.
+/*  
+ *  Constructs an integer node with the given string.
  * 
  *  @param init is the string to be stored in the node's val field.
  *  @return NULL if the node could not be created. Otherwise, returns
@@ -136,8 +141,6 @@ static void destroy( Node *n )
  */
 Node *makeIntNode( char const *init )
 {
-//   printf( "making int node\n" );
-
   int elem;
   char c;
   int test = sscanf( init, "%d%c", &elem, &c );
@@ -158,7 +161,8 @@ Node *makeIntNode( char const *init )
   return intNode;
 }
 
-/*  Constructs a real node with the given string.
+/*  
+ *  Constructs a real node with the given string.
  * 
  *  @param init is the double value to be stored in the node's val field.
  *  @return NULL if the node could not be created. Otherwise, returns
@@ -166,8 +170,7 @@ Node *makeIntNode( char const *init )
  */
 Node *makeRealNode( char const *init )
 {
-
-  double elem = 0.0;
+  double elem = 0;
   char c = NULL;
   
   if ( init[ 0 ] == '"' ) {
@@ -191,7 +194,8 @@ Node *makeRealNode( char const *init )
   return NULL;
 }
 
-/*  Constructs a string node with the given string.
+/*  
+ *  Constructs a string node with the given string.
  * 
  *  @param init is the string to be stored in the node's val field.
  *  @return NULL if the node could not be created. Otherwise, returns
@@ -211,21 +215,16 @@ Node *makeStringNode( char const *init )
   for ( int i = 1; i < strLength - 1; i++ ) {
     elem[ i - 1 ] = init[ i ];
   }
-  elem[ strLength - 2 ] = '\0';
-  
-//   printf( "ELEM: %s\n", elem );
+  elem[ strLength - RM_END_QUOTE ] = '\0';  
 
-   elem[ strLength ] = '\0';
+  Node *n = ( Node * ) malloc( sizeof( Node ) );
+  char *val = ( char * ) malloc( sizeof( char ) );
+  val = elem;
+  n->print = printStr;
+  n->equals = equalsString;
+  n->destroy = destroy;
+  n->next = NULL;
+  n->val = val;
 
-    Node *n = ( Node * ) malloc( sizeof( Node ) );
-    char *val = ( char * ) malloc( sizeof( char ) );
-    val = elem;
-    n->print = printStr;
-    n->equals = equalsString;
-    n->destroy = destroy;
-    n->next = NULL;
-    n->val = val;
-//   printf( "making string node3\n" );
-
-    return n;
+  return n;
 }

@@ -29,7 +29,7 @@ char *readLine( FILE *fp )
 
   while ( ch != '\n' && ch != EOF ) {
     if ( len >= capacity ) {
-      capacity *= 2;
+      capacity *= CAP_DOUBLE;
       input = ( char * ) realloc(input, (capacity + 1) * sizeof( char ) );
     }
 

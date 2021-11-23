@@ -10,7 +10,8 @@
 #include "queue.h"
 
 
-/*  Creates a new queue with an empty head pointer and a pointer
+/*  
+ *  Creates a new queue with an empty head pointer and a pointer
  *  to a tail pointer.
  * 
  *  @return the newly created queue.
@@ -23,7 +24,8 @@ Queue *makeQueue()
   return q;
 }
 
-/*  Adds a node to the back of the queue.
+/*  
+ *  Adds a node to the back of the queue.
  *
  *  @param q is the queue the node is being added to.
  *  @param n is the node being added to the queue.
@@ -34,7 +36,8 @@ void enqueue( Queue *q, Node *n )
   q->tail = &( ( *(q->tail) )->next);
 }
 
-/*  Removes the head node from the queue and re-assigns the
+/*  
+ *  Removes the head node from the queue and re-assigns the
  *  next node as the head.
  *
  *  @param q is the queue whose head node is being removed.
@@ -43,6 +46,7 @@ void enqueue( Queue *q, Node *n )
 Node *dequeue( Queue *q )
 {
   if ( q->head != NULL ) {
+    
     // create dulicatae head node to return
     Node *retNode = q->head;
     q->head = q->head->next;
@@ -51,6 +55,7 @@ Node *dequeue( Queue *q )
     if ( !q->head ) {
     	q->tail = &( q->head );
     }
+    
     // free temp node memory and return duplicate
     return retNode;
   }
@@ -58,13 +63,16 @@ Node *dequeue( Queue *q )
   return NULL;
 }
 
-/*  Removes the requested node from its position in the queue
+/*  
+ *  Removes the requested node from its position in the queue
  *  and places it at the front of the queue returns true. If
  *  the node is not found in the queue, false is returned.
  * 
  *  @param q is the queue being amended.
  *  @param example is the node being requested from the queue
  *         for promotion.
+ *  @return true if the node was found and promoted. Otherwise, 
+ *          returns false.
  */
 bool promote( Queue *q, Node const *example )
 {
@@ -79,26 +87,19 @@ bool promote( Queue *q, Node const *example )
   if ( cur->equals( cur, example ) ) {
      return true;
   }
+
   // create temp head node from current head
   while ( cur->next != NULL ) {
-//      printf( "here 1\n");
-
     prev = cur;
     cur = cur->next;
     
     if ( cur->equals( cur, example ) ) {
-//       printf( "here 2\n");
       found = true;
       break;
     }
   }
-  
-
-//   printf( "here 3\n");
 
   if ( found ) {
-//      printf( "here 1\n");
-
     if ( cur->next == NULL ) {     // If found node is at the end
       prev->next = NULL;
       q->tail = &prev->next;
@@ -119,7 +120,8 @@ bool promote( Queue *q, Node const *example )
   return false;
 }
 
-/*  Frees the memory allocated for the queue.
+/*  
+ *  Frees the memory allocated for the queue.
  * 
  *  @param q is the queue being freed.
  */
