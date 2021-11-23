@@ -41,7 +41,7 @@ int main()
   do {
     printf( "cmd> " );
     cmd = readLine( stdin );
-    printf( "%s\n", cmd );
+    printf( "%s", cmd );
 
     if ( cmd == NULL ) {
       break;
@@ -54,12 +54,13 @@ int main()
     int pos = 0;
     
     if ( sscanf( cmd, "%s%n", command, &pos ) != 1 ) {
-      printf( "Invalid command\n\n" );
+//       printf( "Invalid command\n\n" );
       free( command );
       free( element );
       break;
     }    
 
+	printf( "\n");
     // QUIT
     if ( strcmp( "quit\0", command ) == 0 ) {
       free( command );
@@ -70,7 +71,7 @@ int main()
     // ENQUEUE
     else if ( strcmp( "enqueue\0", command ) == 0 ) {
     
-		int length = strlen( cmd );
+	  int length = strlen( cmd );
 
 	  int i = 1;
       for ( ; i < length - 1; i++) {
@@ -91,7 +92,7 @@ int main()
         }
       }      
       if ( !built ) {
-        printf( "Invalid command\n\n" );
+        printf( "Invalid command\n" );
       }
       printf( "\n" );
       continue;
@@ -113,15 +114,15 @@ int main()
 
     // PROMOTE
     else if ( strcmp( "promote\0", command ) == 0 ) {
-//       int scanCount = 0;
-//       int elemCount = 0;
-//       do {
-//         scanCount = sscanf( cmd + pos, "%s", element );
-//         if ( scanCount > 0 ) {
-//           elemCount++;
-//         }
-//       } while ( scanCount > 0 );
-      
+      int length = strlen( cmd );
+
+	  int i = 1;
+      for ( ; i < length - 1; i++) {
+      	element[i - 1] = cmd[pos + i];
+      }
+        
+       element[ i ] = '\0';
+       
       if ( qCount == 0 ) {
         printf( "Invalid command\n\n" );
 //         free( command );
@@ -130,17 +131,19 @@ int main()
       }
       
       bool promoted = false;
-      Node *n;
+      Node *n = NULL;
       for ( int i = 0; i < arrLen; i++ ) {
         n = nodeConstructors[ i ]( element );
-        if ( n->val != NULL ) {
+        if ( n != NULL ) {
           promoted = promote( q, n );
+          if ( promoted ) {
+          }
           break;
         }
       }
       
       if ( !promoted ) {
-        printf( "Invalid command\n" );
+        printf( "Invalid command\n\n" );
         continue;
       }
       printf( "\n" );

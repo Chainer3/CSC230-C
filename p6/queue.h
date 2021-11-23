@@ -84,7 +84,7 @@ Node *dequeue(Queue *q);
  *  @param example is the node being requested from the queue
  *         for promotion.
  */
-bool promote(Queue *q, Node const *example);
+bool promote(Queue *q, Node const *example );
 
 /*  Frees the memory allocated for the queue.
  * 

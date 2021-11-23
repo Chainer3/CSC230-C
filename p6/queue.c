@@ -68,30 +68,55 @@ Node *dequeue( Queue *q )
  */
 bool promote( Queue *q, Node const *example )
 {
-      if ( example == NULL )
-        return false;
-        
-    for ( int i = 0; i < q->length; i++ ) {
-        Node *n = dequeue( q );
-        if ( n->equals( n, example ) ) {
-            // when n is the node we want to promote
-            
-            // dequeue everything until we hit the node we want to promote
-            for ( int j = i; j < q->length; j++ )
-                enqueue( q, dequeue( q ) );
-
-            // enqueue the node we want to promote
-            enqueue( q, n );
-
-            // enqueue everything after the node we want to promote
-            for ( int k = 1; k < q->length; k++ )
-                enqueue( q, dequeue( q ) );
-
-            return true;
-        }
-        enqueue( q, n );
-    }
+  if ( q->head == NULL ) {
     return false;
+  }
+
+  Node *cur = q->head;
+  Node *prev;
+  bool found = false;
+  
+  if ( cur->equals( cur, example ) ) {
+     return true;
+  }
+  // create temp head node from current head
+  while ( cur->next != NULL ) {
+//      printf( "here 1\n");
+
+    prev = cur;
+    cur = cur->next;
+    
+    if ( cur->equals( cur, example ) ) {
+//       printf( "here 2\n");
+      found = true;
+      break;
+    }
+  }
+  
+
+//   printf( "here 3\n");
+
+  if ( found ) {
+//      printf( "here 1\n");
+
+    if ( cur->next == NULL ) {     // If found node is at the end
+      prev->next = NULL;
+      q->tail = &prev->next;
+      cur->next = q->head;
+      q->head = cur;
+
+      return true;
+    } else if ( q->head->equals( q->head, cur ) ){
+      return true;
+    } else {
+      prev->next = cur->next;
+      cur->next = q->head;
+      q->head = cur;
+      return true;
+    }
+  }
+
+  return false;
 }
 
 /*  Frees the memory allocated for the queue.
