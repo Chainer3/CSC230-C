@@ -57,27 +57,27 @@ int main()
       break;
     }
     printf( "\n");
-    
+
     // QUIT
     if ( strcmp( "quit\0", command ) == 0 ) {
       free( command );
       free( element );
       break;
     }
-    
+
     // ENQUEUE
     else if ( strcmp( "enqueue\0", command ) == 0 ) {
       int length = strlen( cmd );
       int i = 1;
       for ( ; i < length - 1; i++) {
-      	element[i - 1] = cmd[pos + i];
+        element[i - 1] = cmd[pos + i];
       }
       element[ i ] = '\0';
 
       while ( *element == ' ') {
         element++;
       }
- 	  for ( int i = strlen(element) - 1; i > 0; i--) {
+      for ( int i = strlen(element) - 1; i > 0; i--) {
         if ( element[i] != ' ')
           break;	
           element[i] = '\0';
@@ -93,7 +93,7 @@ int main()
           qCount++;
           break;
         }
-      }      
+      }
       if ( !built ) {
         printf( "Invalid command\n" );
       }
@@ -132,7 +132,7 @@ int main()
       while ( *element == ' ') {
         element++;
       }
-	
+
       for ( int i = strlen(element) - 1; i > 0; i--) {
         if ( element[i] != ' ') {
           break;
@@ -151,7 +151,7 @@ int main()
           }
         }
       }
-      
+
       if ( !promoted ) {
         printf( "Invalid command\n\n" );
         continue;

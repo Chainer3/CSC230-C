@@ -144,11 +144,11 @@ Node *makeIntNode( char const *init )
   int elem;
   char c;
   int test = sscanf( init, "%d%c", &elem, &c );
-  
+
   if ( test != 1 || init[ 0 ] == '"') { 
-  	return NULL;
+    return NULL;
   }
-    
+
   Node *intNode = ( Node * ) malloc( sizeof( Node ) );
   int *val = ( int * ) malloc( sizeof( int ) );
   *val = elem;
@@ -176,12 +176,12 @@ Node *makeRealNode( char const *init )
   if ( init[ 0 ] == '"' ) {
     return NULL;
   }
-  
+
   if ( sscanf( init, "%lf%c", &elem, &c ) == 1 ) {
     Node *realNode = ( Node * ) malloc( sizeof( Node ) );
     double *val = ( double * ) malloc( sizeof( double ) );
     *val = elem;
-    
+
     realNode->print = printReal;
     realNode->equals = equalsReal;
     realNode->destroy = destroy;
@@ -206,7 +206,7 @@ Node *makeStringNode( char const *init )
   if ( init[ 0 ] != '"' || init[ strLength - 1 ] != '"' ) {
     return NULL;
   }
-  
+
   // Allocate a string with a small, initial capacity.
   int capacity = strLength;
   char *elem = ( char * ) malloc( capacity * sizeof( char ) + 1 );
