@@ -46,20 +46,20 @@ void enqueue( Queue *q, Node *n )
 Node *dequeue( Queue *q )
 {
   if ( q->head != NULL ) {
-    
+
     // create dulicatae head node to return
     Node *retNode = q->head;
     q->head = q->head->next;
     retNode->next = NULL;
-    
+
     if ( !q->head ) {
-    	q->tail = &( q->head );
+      q->tail = &( q->head );
     }
-    
+
     // free temp node memory and return duplicate
     return retNode;
   }
-  
+
   return NULL;
 }
 
@@ -83,7 +83,7 @@ bool promote( Queue *q, Node const *example )
   Node *cur = q->head;
   Node *prev;
   bool found = false;
-  
+
   if ( cur->equals( cur, example ) ) {
      return true;
   }
@@ -92,7 +92,7 @@ bool promote( Queue *q, Node const *example )
   while ( cur->next != NULL ) {
     prev = cur;
     cur = cur->next;
-    
+
     if ( cur->equals( cur, example ) ) {
       found = true;
       break;

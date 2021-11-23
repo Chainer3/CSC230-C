@@ -37,7 +37,7 @@ int main()
   int qCount = 0;
   int arrLen = sizeof( nodeConstructors )/ sizeof( nodeConstructors[0] ); 
   Queue *q = makeQueue();
-  
+
   do {
     printf( "cmd> " );
     cmd = readLine( stdin );
@@ -49,18 +49,15 @@ int main()
 
     char *command = ( char * ) malloc( sizeof( char ) * CMD_CAP );
     char *element = ( char * ) malloc( sizeof( char ) * strlen( cmd ) );
-    
-//     int *element = ( int *) malloc( sizeof( int ) * CMD_CAP );
     int pos = 0;
-    
+
     if ( sscanf( cmd, "%s%n", command, &pos ) != 1 ) {
-//       printf( "Invalid command\n\n" );
       free( command );
       free( element );
       break;
-    }    
-
-	printf( "\n");
+    }
+    printf( "\n");
+    
     // QUIT
     if ( strcmp( "quit\0", command ) == 0 ) {
       free( command );
@@ -70,28 +67,21 @@ int main()
     
     // ENQUEUE
     else if ( strcmp( "enqueue\0", command ) == 0 ) {
-    
-	  int length = strlen( cmd );
-      
-	  int i = 1;
+      int length = strlen( cmd );
+      int i = 1;
       for ( ; i < length - 1; i++) {
       	element[i - 1] = cmd[pos + i];
       }
-        
-       element[ i ] = '\0';
- 	
- 	while ( *element == ' ')
- 		element++;
- 		
- 	for ( int i = strlen(element) - 1; i > 0; i--) {
- 		if ( element[i] != ' ')
- 			break;	
- 	    element[i] = '\0';
- 	}
- 	
-//  	printf( "%d", (int) strlen(element));
-//  	printf( "ELEMENT: %s\n\n", element );
+      element[ i ] = '\0';
 
+      while ( *element == ' ') {
+        element++;
+      }
+ 	  for ( int i = strlen(element) - 1; i > 0; i--) {
+        if ( element[i] != ' ')
+          break;	
+          element[i] = '\0';
+      }
 
       bool built = false;
       Node *n = NULL;
@@ -131,25 +121,25 @@ int main()
         printf( "Invalid command\n\n" );
         continue;
       }
-      
-	  int length = strlen( cmd );
-	  int i = 1;
+
+      int length = strlen( cmd );
+      int i = 1;
       for ( ; i < length - 1; i++) {
-      	element[i - 1] = cmd[pos + i];
+        element[i - 1] = cmd[pos + i];
       }  
       element[ i ] = '\0';
 
- 	  while ( *element == ' ') {
- 		element++;
- 	  }
- 		
- 	  for ( int i = strlen(element) - 1; i > 0; i--) {
- 	    if ( element[i] != ' ') {
+      while ( *element == ' ') {
+        element++;
+      }
+	
+      for ( int i = strlen(element) - 1; i > 0; i--) {
+        if ( element[i] != ' ') {
           break;
         }
- 	    element[i] = '\0';
- 	  }
-    
+        element[i] = '\0';
+      }
+
       bool promoted = false;
       Node *n = NULL;
       for ( int i = 0; i < arrLen; i++ ) {

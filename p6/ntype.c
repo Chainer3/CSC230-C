@@ -178,7 +178,6 @@ Node *makeRealNode( char const *init )
   }
   
   if ( sscanf( init, "%lf%c", &elem, &c ) == 1 ) {
-
     Node *realNode = ( Node * ) malloc( sizeof( Node ) );
     double *val = ( double * ) malloc( sizeof( double ) );
     *val = elem;
@@ -190,7 +189,7 @@ Node *makeRealNode( char const *init )
     realNode->val = val;
     return realNode;
   }
-    
+
   return NULL;
 }
 

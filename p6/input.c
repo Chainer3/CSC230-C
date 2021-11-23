@@ -2,17 +2,18 @@
  *  @file input.c
  *  @author Stephen Gonsalves (dkgonsal)
  *  
- *  The input file handles functions focused on File and Terminal I/O. 
+ *  The input file handles reading in a line of text from terminal input. 
  */
 
 #include "input.h"
 
-/* The readLine() function receives a file stream pointer that it uses to read a single
-   line of text from the input file. If the input reaches EOF, the function 
-   
-   @param fp the file stream opened in map.c
-   @return the line of input.
-*/
+/* 
+ * The readLine() function receives a file stream pointer that it uses to read a single
+ * line of text from the input file. If the input reaches EOF, the function 
+ *
+ * @param fp the file stream opened in map.c
+ * @return the line of input.
+ */
 char *readLine( FILE *fp )
 {
   if ( !fp ) {
