@@ -156,7 +156,7 @@ int main()
         printf( "Invalid command\n\n" );
         continue;
       }
-      
+
       printf( "\n" );
       n->destroy( n );
     }
@@ -166,15 +166,15 @@ int main()
       printf( "%d\n\n", qCount );
       continue;
     } 
-    
+
     // Invalid Command
     else {
       printf( "Invalid command\n\n" );
       continue;
     }
 
-   free( command );
-   free( element );
+    free( command );
+    free( element );
 
   } while( true );
 
