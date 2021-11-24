@@ -33,7 +33,7 @@ static Node *(*nodeConstructors[])( char const *init ) = {
  */
 int main()
 {
-  char *cmd;
+  char *cmd = NULL;
   int qCount = 0;
   int arrLen = sizeof( nodeConstructors )/ sizeof( nodeConstructors[0] ); 
   Queue *q = makeQueue();
@@ -104,6 +104,7 @@ int main()
     // DEQUEUE
     else if ( strcmp( "dequeue\0", command ) == 0 ) {
       if ( q->head == NULL || qCount == 0 ) {
+        
         printf( "Invalid command\n\n" );
       } else {
         Node *temp = dequeue( q );

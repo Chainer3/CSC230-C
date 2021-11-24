@@ -1,10 +1,9 @@
 /**
- *  @file queue.c
+ *   @file queue.c
  *   @author Stephen Gonsalves (dkgonsal)
  *   
- *   The dictionary file creates a dictionary struct and handles all of the functions
- *   associated with the dictionary. The dictionary file only depends on its own header
- *   file.
+ *   The queue file creates a queue struct and handles all of the functions
+ *   associated with the with adding, promoting and removing nodes.
  */
 
 #include "queue.h"

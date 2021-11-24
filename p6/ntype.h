@@ -1,6 +1,6 @@
 /**
  *  @file ntype.h
- *  @author
+ *  @author Stephen Gonsalves (dkgonsal)
  *
  *  Header for ntype exposing functions for creating nodes of various types.
  */
